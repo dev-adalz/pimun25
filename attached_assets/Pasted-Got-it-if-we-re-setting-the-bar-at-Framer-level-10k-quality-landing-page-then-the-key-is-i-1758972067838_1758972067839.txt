@@ -1,0 +1,85 @@
+Got it — if we’re setting the bar at **Framer-level, $10k-quality landing page**, then the key is: it’s not just about flashy animations, it’s about storytelling + interactivity + polish that screams “premium.” Let me break down **aesthetic + interaction plan** for your MUN event landing page that uses **Next.js + Framer Motion + GSAP + Lottie animations + Tailwind** stack:
+
+---
+
+## **1. Aesthetic Direction**
+
+* **Overall Feel:** Minimalist luxury — dark academia meets global diplomacy. Imagine **black-and-gold** as the base, with **accents of deep navy & emerald** (serious, prestigious, international feel).
+* **Typography:**
+
+  * Headlines → **Serif, elegant (Playfair Display, Cormorant, or Canela)**.
+  * Body → **Modern sans-serif (Inter, Neue Haas, or Satoshi)**.
+* **Layout Style:**
+
+  * **Full-bleed hero sections** with layered parallax.
+  * **Split-screen storytelling** (image on one side, text on the other, with scroll-based transitions).
+  * **Glassmorphism elements** for cards (committees, schedule, speakers).
+* **Imagery & Motion Graphics:**
+
+  * High-res globe animations (3D WebGL or Lottie).
+  * Subtle animated line art (diplomatic motifs: laurel wreaths, maps, flags).
+  * Conference photography (previous MUNs, formal suits, committee debates).
+
+---
+
+## **2. Animation & Interactivity Plan**
+
+* **Hero Section:**
+
+  * Animated **rotating 3D globe** (Three.js or R3F).
+  * Framer Motion staggered reveal of title + CTA.
+  * Background subtle GSAP gradient waves / particles.
+* **On Scroll:**
+
+  * **Parallax scrolling** with Framer Motion spring transitions.
+  * **Section-to-section snap transitions** (like Apple product pages).
+* **Hover States:**
+
+  * Committee cards expand with Lottie micro-animations (flags waving, books flipping).
+  * Sponsor logos transition from grayscale → color.
+* **Dynamic Schedule:**
+
+  * Interactive timeline with horizontal scroll + smooth easing.
+* **Delegates/Speakers Section:**
+
+  * 3D hover tilt effect with depth shadows.
+  * Modal popups with smooth fade/scale animations.
+* **Call-to-Action (Register Now):**
+
+  * Button with liquid morph animation (Framer Motion path morph).
+  * Sticky floating CTA bar that follows scroll subtly.
+
+---
+
+## **3. Premium Features (That Make It “$10k” Quality)**
+
+* **Personalization:**
+
+  * Dynamic greeting (e.g., “Hello, future delegate!”).
+* **Accessibility + Performance:**
+
+  * A11Y compliance, buttery-smooth 60fps animations.
+* **SEO + Shareability:**
+
+  * OpenGraph rich previews, social embeds.
+* **Extras:**
+
+  * **Countdown timer** to conference with a flipping-card animation.
+  * **Custom cursor** (circle with magnetic hover effect).
+  * **Ambient background audio toggle** (subtle UN-like gavel sounds / conference murmurs).
+
+---
+
+## **4. Competitor Benchmarking**
+
+Sites like:
+
+* **Ivy League MUN websites** → sleek but traditional.
+* **Framer showcases** → immersive, bold, high-motion.
+  We’ll merge both → prestige + cinematic feel.
+
+---
+
+🔥 This gives you a **blueprint that’s Framer Motion-level, high budget, attention-grabbing** while staying elegant enough for a serious academic event.
+
+Do you want me to now **write a full “creative direction + style guide” doc** (colors, type scales, motion rules, component breakdown), so it can be directly handed to a dev/designer team?

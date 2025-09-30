@@ -177,16 +177,16 @@ export default function CommitteesSection() {
               }}
             >
               <Card 
-                className="p-6 h-full bg-card/50 backdrop-blur-sm border-card-border hover-elevate transition-all duration-300 group lgold-border"
+                className="p-6 h-full bg-card/50 backdrop-blur-sm border-card-border hover-elevate transition-all duration-300 group lgold-border overflow-hidden"
                 data-testid={`card-committee-${index}`}
               >
                 <div className="mb-4">
                   {/* Committee Type & Difficulty */}
-                  <div className="flex justify-between items-start mb-3">
-                    <Badge variant="outline" className="text-xs">
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <Badge variant="outline" className="text-xs shrink-0">
                       {committee.type}
                     </Badge>
-                    <Badge className={`text-xs ${getDifficultyColor(committee.difficulty)}`}>
+                    <Badge className={`text-xs shrink-0 ${getDifficultyColor(committee.difficulty)}`}>
                       {committee.difficulty}
                     </Badge>
                   </div>

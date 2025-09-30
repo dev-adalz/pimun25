@@ -3,7 +3,6 @@ import { useInView } from "react-intersection-observer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
-  ExternalLink, 
   Mail, 
   MapPin, 
   Calendar,
@@ -12,6 +11,8 @@ import {
   Linkedin,
   Instagram
 } from "lucide-react";
+import { useLocation } from "wouter";
+import logoUrl from "@assets/logo.png";
 
 // todo: replace with real sponsor data
 const sponsors = [
@@ -35,6 +36,7 @@ export default function FooterSection() {
     triggerOnce: true,
     threshold: 0.1
   });
+  const [, navigate] = useLocation();
 
   const getTierColor = (tier: string) => {
     switch (tier.toLowerCase()) {
@@ -112,35 +114,38 @@ export default function FooterSection() {
         transition={{ delay: 0.6, duration: 0.8 }}
         className="py-16 px-6 bg-gradient-to-r from-primary/10 via-transparent to-primary/10 border-y border-primary/20"
       >
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <h3 className="text-3xl lg:text-4xl font-serif font-bold text-foreground mb-4">
-            Shape the Future of Diplomacy
+            Join Us At PIMUN25!
           </h3>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join us at PIMUN25 and become part of a global community committed to 
-            international understanding, cooperation, and peace.
+          <p className="text-lg text-muted-foreground mb-10 max-w-3xl mx-auto">
+            Follow these simple steps to secure your place at the most prestigious MUN conference of 2025.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+          {/* Steps */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            {[
+              { n: '1', title: 'Choose Your Role', desc: 'Select from Delegate, Executive Board, or Campus Ambassador positions' },
+              { n: '2', title: 'Complete Registration', desc: 'Fill out the registration form with your details and preferences' },
+              { n: '3', title: 'Payment & Confirmation', desc: 'Secure your spot with payment and receive confirmation details' },
+            ].map((s) => (
+              <div key={s.n} className="glass thin-border rounded-xl p-5 text-left">
+                <div className="w-8 h-8 rounded-md bg-primary/15 thin-border flex items-center justify-center font-semibold text-sm mb-3">{s.n}</div>
+                <div className="font-medium mb-1">{s.title}</div>
+                <div className="text-sm text-muted-foreground">{s.desc}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Role Buttons */}
+          <div className="flex justify-center">
             <Button 
               size="lg" 
               className="bg-primary text-primary-foreground hover:bg-primary/90 hover-elevate text-lg px-8 py-6"
-              onClick={() => console.log('Final register clicked')}
-              data-testid="button-final-register"
+              onClick={() => navigate('/registration')}
+              data-testid="footer-register-now"
             >
-              Register Now for PIMUN25
-              <ExternalLink className="w-5 h-5 ml-2" />
-            </Button>
-            
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-primary text-primary hover:bg-primary/10 hover-elevate text-lg px-8 py-6"
-              onClick={() => console.log('Learn more clicked')}
-              data-testid="button-learn-more"
-            >
-              <Globe className="w-5 h-5 mr-2" />
-              Learn More
+              Register Now
             </Button>
           </div>
         </div>
@@ -160,11 +165,11 @@ export default function FooterSection() {
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4 text-primary" />
-                  <span>April 15-17, 2025</span>
+                  <span>November 28-30, 2025</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-primary" />
-                  <span>International Convention Center</span>
+                  <span>Presidency International School, Chattogram, Bangladesh</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Globe className="w-4 h-4 text-primary" />
@@ -181,14 +186,32 @@ export default function FooterSection() {
             >
               <h4 className="font-serif font-semibold text-foreground mb-4">Quick Links</h4>
               <div className="space-y-2 text-sm">
-                {['Registration', 'Committees', 'Schedule', 'Accommodation', 'FAQs'].map((link) => (
+                {[
+                  { label: 'Registration', href: '/registration' },
+                  { label: 'Committees', href: '/#committees' },
+                  { label: 'Schedule', href: '/schedule' },
+                  { label: 'Accommodation', href: '/accommodation' },
+                  { label: 'FAQs', href: '/faqs' },
+                ].map((link) => (
                   <a
-                    key={link}
-                    href="#"
+                    key={link.label}
+                    href={link.href}
                     className="block text-muted-foreground hover:text-primary transition-colors"
-                    data-testid={`footer-link-${link.toLowerCase()}`}
+                    onClick={(e) => { 
+                      e.preventDefault(); 
+                      if (link.href.startsWith('/#')) { 
+                        navigate('/'); 
+                        setTimeout(() => {
+                          const el = document.getElementById(link.href.replace('/#',''));
+                          el?.scrollIntoView({ behavior: 'smooth' });
+                        }, 50);
+                      } else {
+                        navigate(link.href); 
+                      }
+                    }}
+                    data-testid={`footer-link-${link.label.toLowerCase()}`}
                   >
-                    {link}
+                    {link.label}
                   </a>
                 ))}
               </div>
@@ -208,7 +231,7 @@ export default function FooterSection() {
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-primary" />
-                  <span>New York, United States</span>
+                  <span>Chattogram, Bangladesh</span>
                 </div>
               </div>
             </motion.div>
@@ -245,14 +268,11 @@ export default function FooterSection() {
           >
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
-                <Globe className="w-4 h-4 text-primary" />
+                <img src={logoUrl} alt="PIMUN25" className="w-6 h-6 rounded-md thin-border object-cover" />
                 <span className="font-serif font-semibold text-primary">PIMUN25</span>
-                <span>© 2025 Premier International Model United Nations. All rights reserved.</span>
+                <span>© 2025 Presidency International MUN. All rights reserved.</span>
               </div>
-              <div className="flex gap-6">
-                <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-                <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
-              </div>
+              
             </div>
           </motion.div>
         </div>

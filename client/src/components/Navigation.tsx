@@ -1,19 +1,24 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Globe, Menu, X, ExternalLink } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { useLocation } from "wouter";
+import logoUrl from "@assets/logo.png";
 
 const navItems = [
-  { name: "About", href: "#about" },
-  { name: "Committees", href: "#committees" },
-  { name: "Team", href: "#team" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "Contact", href: "#contact" }
+  { name: "Home", href: "/" },
+  { name: "Registration", href: "/registration" },
+  { name: "Resources", href: "/resources" },
+  { name: "Team", href: "/team" },
+  { name: "Galleries", href: "/galleries" },
+  { name: "Past", href: "/past" },
+  { name: "Contact", href: "/contact" }
 ];
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [, navigate] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +30,7 @@ export default function Navigation() {
   }, []);
 
   const handleNavClick = (href: string) => {
-    console.log(`Navigate to ${href}`);
+    navigate(href);
     setIsMobileMenuOpen(false);
   };
 
@@ -38,24 +43,21 @@ export default function Navigation() {
         className={`
           fixed top-0 left-0 right-0 z-50 transition-all duration-300
           ${isScrolled 
-            ? 'bg-background/80 backdrop-blur-md border-b border-card-border shadow-lg' 
-            : 'bg-transparent'
-          }
+            ? 'glass thin-border soft-gradient' 
+            : 'bg-transparent'}
         `}
       >
-        <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="max-w-7xl mx-auto px-6 py-3">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <motion.div
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.02 }}
               className="flex items-center gap-2 cursor-pointer"
-              onClick={() => handleNavClick('#hero')}
+              onClick={() => handleNavClick('/')}
               data-testid="nav-logo"
             >
-              <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Globe className="w-5 h-5 text-primary" />
-              </div>
-              <span className="font-serif font-bold text-xl text-foreground">
+              <img src={logoUrl} alt="PIMUN25" className="w-9 h-9 rounded-lg thin-border object-cover" />
+              <span className="font-serif font-semibold text-[1.05rem] tracking-tight">
                 PIMUN25
               </span>
             </motion.div>
@@ -65,41 +67,31 @@ export default function Navigation() {
               {navItems.map((item, index) => (
                 <motion.a
                   key={item.name}
-                  initial={{ opacity: 0, y: -20 }}
+                  initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 * index, duration: 0.5 }}
+                  transition={{ delay: 0.06 * index, duration: 0.4 }}
                   href={item.href}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200 text-sm font-medium"
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium"
                   onClick={(e) => {
                     e.preventDefault();
                     handleNavClick(item.href);
                   }}
                   data-testid={`nav-${item.name.toLowerCase()}`}
                 >
-                  {item.name}
+                  <span className="hover:accent-underline">{item.name}</span>
                 </motion.a>
               ))}
             </div>
 
-            {/* Desktop CTA Buttons */}
+            {/* Desktop CTA Button */}
             <div className="hidden lg:flex items-center gap-3">
               <Button
-                variant="outline"
                 size="sm"
-                className="border-primary text-primary hover:bg-primary/10 hover-elevate"
-                onClick={() => console.log('Nav register clicked')}
+                className="bg-primary/90 text-primary-foreground hover:bg-primary hover-elevate thin-border"
+                onClick={() => handleNavClick('/registration')}
                 data-testid="nav-button-register"
               >
                 Register
-              </Button>
-              <Button
-                size="sm"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 hover-elevate"
-                onClick={() => console.log('Nav confirm payment clicked')}
-                data-testid="nav-button-payment"
-              >
-                <ExternalLink className="w-4 h-4 mr-1" />
-                Payment
               </Button>
             </div>
 
@@ -128,17 +120,17 @@ export default function Navigation() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.2 }}
-              className="lg:hidden bg-background/95 backdrop-blur-md border-t border-card-border"
+              className="lg:hidden glass thin-border"
             >
               <div className="px-6 py-4 space-y-3">
                 {navItems.map((item, index) => (
                   <motion.a
                     key={item.name}
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0, x: -12 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.05 * index }}
                     href={item.href}
-                    className="block text-muted-foreground hover:text-primary transition-colors py-2 border-b border-card-border/50 last:border-b-0"
+                    className="block text-muted-foreground hover:text-foreground transition-colors py-2 border-b border-card-border/50 last:border-b-0"
                     onClick={(e) => {
                       e.preventDefault();
                       handleNavClick(item.href);
@@ -149,29 +141,16 @@ export default function Navigation() {
                   </motion.a>
                 ))}
                 
-                {/* Mobile CTA Buttons */}
-                <div className="pt-4 space-y-2">
+                {/* Mobile CTA Button */}
+                <div className="pt-4">
                   <Button
-                    variant="outline"
-                    className="w-full border-primary text-primary hover:bg-primary/10"
+                    className="w-full bg-primary/90 text-primary-foreground hover:bg-primary thin-border"
                     onClick={() => {
-                      console.log('Mobile register clicked');
-                      setIsMobileMenuOpen(false);
+                      handleNavClick('/registration');
                     }}
                     data-testid="nav-mobile-register"
                   >
                     Register for PIMUN25
-                  </Button>
-                  <Button
-                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
-                    onClick={() => {
-                      console.log('Mobile confirm payment clicked');
-                      setIsMobileMenuOpen(false);
-                    }}
-                    data-testid="nav-mobile-payment"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Confirm Payment
                   </Button>
                 </div>
               </div>

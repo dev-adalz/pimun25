@@ -46,7 +46,7 @@ export default function HighlightsSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4">
+          <h2 className="text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4 lgold-underline">
             Why Choose PIMUN25?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -69,7 +69,7 @@ export default function HighlightsSection() {
               }}
             >
               <Card 
-                className="relative p-6 h-full bg-card/50 backdrop-blur-sm border-card-border hover-elevate transition-all duration-300 group overflow-hidden"
+                className="relative p-6 h-full bg-card/50 backdrop-blur-sm border-card-border hover-elevate transition-all duration-300 group overflow-hidden lgold-border"
                 data-testid={`card-highlight-${index}`}
               >
                 {/* Gradient Background */}
@@ -78,13 +78,13 @@ export default function HighlightsSection() {
                 <div className="relative z-10">
                   {/* Icon */}
                   <div className="mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors lgold-glow">
                       <highlight.icon className="w-6 h-6 text-primary" />
                     </div>
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors lgold-underline">
                     {highlight.title}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
@@ -93,7 +93,7 @@ export default function HighlightsSection() {
                 </div>
 
                 {/* Hover Glow Effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300 bg-gradient-to-br from-primary/20 via-transparent to-transparent" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300 bg-gradient-to-br from-primary/20 via-transparent to-transparent lgold-glow" />
               </Card>
             </motion.div>
           ))}

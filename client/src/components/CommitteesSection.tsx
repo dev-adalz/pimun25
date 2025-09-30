@@ -4,74 +4,127 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Users, FileText, Clock } from "lucide-react";
+import { useState } from "react";
+import { useLocation } from "wouter";
 
 // todo: replace with real committee data
-const committees = [
+type Committee = {
+  name: string;
+  agenda: string;
+  type: string;
+  difficulty: string;
+  delegates: number;
+  duration: string;
+  description?: string;
+};
+
+const committees: Committee[] = [
   {
-    name: "UN Security Council",
-    agenda: "Addressing Cybersecurity Threats to International Peace",
-    type: "Crisis Committee",
+    name: "United Nations Security Council (UNSC)",
+    agenda: "Addressing Cybersecurity Threats to International Peace and Security",
+    type: "Crisis / Security Committee",
     difficulty: "Advanced",
     delegates: 15,
-    duration: "3 Days"
+    duration: "2 Days",
+    description: "UNSC addresses threats to international peace and security. This council will examine state and non-state cyber operations, deterrence, and international legal frameworks.",
   },
   {
-    name: "General Assembly",
-    agenda: "Sustainable Development Goals: Progress and Future Directions",
+    name: "Disarmament and International Security (DISEC)",
+    agenda: "Nuclear Non-Proliferation and Emerging Technologies",
     type: "General Committee",
-    difficulty: "Beginner",
-    delegates: 50,
-    duration: "3 Days"
-  },
-  {
-    name: "Economic & Social Council",
-    agenda: "Global Supply Chain Resilience in Post-Pandemic Era",
-    type: "Specialized Committee",
     difficulty: "Intermediate",
-    delegates: 30,
-    duration: "2 Days"
+    delegates: 50,
+    duration: "3 Days",
+    description: "DISEC focuses on disarmament and global security, tackling strategic stability, arms control regimes, and the impact of dual-use innovations.",
   },
   {
-    name: "Human Rights Council",
-    agenda: "Digital Rights and Privacy in the Modern Age",
+    name: "United Nations Development Programme (UNDP)",
+    agenda: "Sustainable Recovery and Post-Crisis Development",
+    type: "Specialized Committee / Programme",
+    difficulty: "Intermediate",
+    delegates: 35,
+    duration: "2 Days",
+    description: "UNDP explores resilient development pathways, financing mechanisms, and inclusive governance for post-crisis recovery.",
+  },
+  {
+    name: "Human Rights Council (UNHRC)",
+    agenda: "Digital Rights, Privacy, and Freedom of Expression in the Information Age",
     type: "Specialized Committee",
     difficulty: "Intermediate",
     delegates: 25,
     duration: "2 Days"
   },
   {
-    name: "International Court of Justice",
-    agenda: "Climate Change Litigation and International Law",
-    type: "Legal Committee",
+    name: "International Court of Justice (ICJ)",
+    agenda: "Climate Change Litigation and the Application of International Law",
+    type: "Legal / Judicial Committee",
     difficulty: "Advanced",
     delegates: 12,
     duration: "3 Days"
   },
   {
-    name: "Historical Security Council",
-    agenda: "The Cuban Missile Crisis - October 1962",
-    type: "Historical Committee",
-    difficulty: "Advanced",
-    delegates: 15,
+    name: "Food and Agriculture Organization (FAO)",
+    agenda: "Ensuring Global Food Security Amidst Climate Shocks",
+    type: "Specialized Committee / Agency",
+    difficulty: "Intermediate",
+    delegates: 40,
     duration: "2 Days"
-  }
-];
-
-const registrationSteps = [
-  {
-    step: 1,
-    title: "Choose Your Role",
-    description: "Select from Delegate, Executive Board, or Campus Ambassador positions"
   },
   {
-    step: 2,
-    title: "Complete Registration",
-    description: "Fill out the registration form with your details and preferences"
+    name: "Convention on Biological Diversity (CBD)",
+    agenda: "Biodiversity Loss, Ecosystem Restoration, and International Cooperation",
+    type: "Specialized Treaty Committee",
+    difficulty: "Intermediate",
+    delegates: 30,
+    duration: "2 Days"
   },
   {
-    step: 3,
-    title: "Payment & Confirmation",
-    description: "Secure your spot with payment and receive confirmation details"
+    name: "Economic and Social Council (ECOSOC)",
+    agenda: "Global Supply Chain Resilience in the Post-Pandemic Era",
+    type: "Specialized / Functional Committee",
+    difficulty: "Intermediate",
+    delegates: 30,
+    duration: "2 Days"
+  },
+  {
+    name: "International Atomic Energy Agency (IAEA)",
+    agenda: "Nuclear Safety, Security, and Peaceful Uses of Nuclear Technology",
+    type: "Specialized / Technical Committee",
+    difficulty: "Advanced",
+    delegates: 25,
+    duration: "3 Days"
+  },
+  {
+    name: "Association of Southeast Asian Nations (ASEAN)",
+    agenda: "Regional Governance, Security, and Climate Adaptation in Southeast Asia",
+    type: "Regional Committee",
+    difficulty: "Intermediate",
+    delegates: 10,
+    duration: "2 Days"
+  },
+  {
+    name: "International Press Corps (IPC)",
+    agenda: "Assessing Global Food Crises and Early Warning Systems",
+    type: "Technical / Analytical Committee",
+    difficulty: "Intermediate",
+    delegates: 20,
+    duration: "2 Days"
+  },
+  {
+    name: "Bangladesh Interim Government",
+    agenda: "Transition Governance, Security, and Constitutional Reform",
+    type: "Crisis Committee",
+    difficulty: "Advanced",
+    delegates: 20,
+    duration: "2 Days"
+  },
+  {
+    name: "Moving Crisis Committee (MCC)",
+    agenda: "Rapid Escalation of Conflict / Humanitarian Crisis Response",
+    type: "Crisis Committee",
+    difficulty: "Advanced",
+    delegates: 18,
+    duration: "2 Days"
   }
 ];
 
@@ -80,6 +133,7 @@ export default function CommitteesSection() {
     triggerOnce: true,
     threshold: 0.1
   });
+  const [, navigate] = useLocation();
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty.toLowerCase()) {
@@ -91,7 +145,7 @@ export default function CommitteesSection() {
   };
 
   return (
-    <section ref={ref} className="py-24 px-6 bg-gradient-to-b from-muted/20 to-background">
+    <section id="committees" ref={ref} className="py-24 px-6 bg-gradient-to-b from-muted/20 to-background">
       <div className="max-w-7xl mx-auto">
         {/* Committees Header */}
         <motion.div
@@ -110,7 +164,7 @@ export default function CommitteesSection() {
         </motion.div>
 
         {/* Committees Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {committees.map((committee, index) => (
             <motion.div
               key={committee.name}
@@ -123,7 +177,7 @@ export default function CommitteesSection() {
               }}
             >
               <Card 
-                className="p-6 h-full bg-card/50 backdrop-blur-sm border-card-border hover-elevate transition-all duration-300 group"
+                className="p-6 h-full bg-card/50 backdrop-blur-sm border-card-border hover-elevate transition-all duration-300 group lgold-border"
                 data-testid={`card-committee-${index}`}
               >
                 <div className="mb-4">
@@ -138,7 +192,7 @@ export default function CommitteesSection() {
                   </div>
 
                   {/* Committee Name */}
-                  <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors lgold-underline">
                     {committee.name}
                   </h3>
 
@@ -147,26 +201,37 @@ export default function CommitteesSection() {
                     {committee.agenda}
                   </p>
 
-                  {/* Committee Stats */}
-                  <div className="flex justify-between text-xs text-muted-foreground mb-4">
-                    <div className="flex items-center gap-1">
-                      <Users className="w-3 h-3" />
-                      <span>{committee.delegates} delegates</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
-                      <span>{committee.duration}</span>
-                    </div>
-                  </div>
-
-                  {/* Action Button */}
+                  
+                  
+                {/* Action Button */}
                   <Button 
                     variant="outline" 
                     size="sm" 
-                    className="w-full group/btn hover:bg-primary hover:text-primary-foreground"
-                    onClick={() => console.log(`View details for ${committee.name}`)}
+                    className="w-full group/btn hover:bg-primary hover:text-primary-foreground lgold-glow"
+                    onClick={() => {
+                      const nameSlug = encodeURIComponent(
+                        committee.name
+                          .toLowerCase()
+                          .split(/[^a-z0-9]+/g)
+                          .filter(Boolean)
+                          .slice(0, 1)
+                          .join('-')
+                      );
+
+                      const agendaSlug = encodeURIComponent(
+                        committee.agenda
+                          .toLowerCase()
+                          .split(/[^a-z0-9]+/g)
+                          .filter(Boolean)
+                          .slice(0, 2)
+                          .join('-')
+                      );
+
+                      navigate(`/blog/${nameSlug}-${agendaSlug}`);
+                    }}
                     data-testid={`button-committee-details-${index}`}
                   >
+
                     <FileText className="w-4 h-4 mr-2" />
                     View Details
                     <ExternalLink className="w-3 h-3 ml-2 opacity-0 group-hover/btn:opacity-100 transition-opacity" />
@@ -176,79 +241,6 @@ export default function CommitteesSection() {
             </motion.div>
           ))}
         </div>
-
-        {/* Registration Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="bg-card/20 backdrop-blur-sm border border-card-border rounded-xl p-8"
-        >
-          <div className="text-center mb-10">
-            <h3 className="text-3xl font-serif font-bold text-foreground mb-4">
-              Ready to Join PIMUN25?
-            </h3>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Follow these simple steps to secure your place at the most prestigious 
-              MUN conference of 2025.
-            </p>
-          </div>
-
-          {/* Registration Steps */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-            {registrationSteps.map((stepInfo, index) => (
-              <motion.div
-                key={stepInfo.step}
-                initial={{ opacity: 0, x: -20 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ delay: 0.8 + index * 0.1, duration: 0.6 }}
-                className="text-center"
-              >
-                <div className="mb-4">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold mx-auto mb-3">
-                    {stepInfo.step}
-                  </div>
-                  <h4 className="text-lg font-semibold text-foreground mb-2">
-                    {stepInfo.title}
-                  </h4>
-                  <p className="text-sm text-muted-foreground">
-                    {stepInfo.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Registration Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="bg-primary text-primary-foreground hover:bg-primary/90 hover-elevate"
-              onClick={() => console.log('Delegate registration clicked')}
-              data-testid="button-register-delegate"
-            >
-              Register as Delegate
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-primary text-primary hover:bg-primary/10 hover-elevate"
-              onClick={() => console.log('Executive Board registration clicked')}
-              data-testid="button-register-executive"
-            >
-              Apply for Executive Board
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-muted text-muted-foreground hover:bg-muted/10 hover-elevate"
-              onClick={() => console.log('Campus Ambassador registration clicked')}
-              data-testid="button-register-ambassador"
-            >
-              Become Campus Ambassador
-            </Button>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

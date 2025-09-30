@@ -18,28 +18,28 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main className="pt-24 px-6">
+      <main className="pt-20 sm:pt-24 px-4 sm:px-6">
         <section className="max-w-5xl mx-auto">
-          <div className="glass thin-border rounded-xl p-6 lgold-glow mb-8">
-            <h1 className="text-3xl font-serif font-semibold">Contact Us</h1>
-            <p className="text-muted-foreground mt-2">Chat with a host member on WhatsApp for quick enquiries.</p>
+          <div className="glass thin-border rounded-xl p-4 sm:p-6 lgold-glow mb-6 sm:mb-8">
+            <h1 className="text-2xl sm:text-3xl font-serif font-semibold">Contact Us</h1>
+            <p className="text-muted-foreground mt-2 text-sm sm:text-base">Chat with a host member on WhatsApp for quick enquiries.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 sm:gap-6">
             {/* WhatsApp Contacts */}
             <Card className="md:col-span-3 thin-border">
-              <CardContent className="p-6 space-y-4">
+              <CardContent className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                 {hosts.map((h) => (
-                  <div key={h.phone} className="flex items-center justify-between rounded-md thin-border p-4">
+                  <div key={h.phone} className="flex flex-col sm:flex-row items-start sm:items-center justify-between rounded-md thin-border p-3 sm:p-4 gap-3">
                     <div className="flex items-center gap-3">
                       <Phone className="w-4 h-4 text-primary" />
                       <div>
                         <div className="text-sm font-medium">{h.name}</div>
-                        <div className="text-sm text-muted-foreground">{h.phone}</div>
+                        <div className="text-xs sm:text-sm text-muted-foreground">{h.phone}</div>
                       </div>
                     </div>
-                    <Button className="bg-primary/90 hover:bg-primary thin-border" onClick={() => openWhatsApp(h.phone)}>
-                      <MessageCircle className="w-4 h-4 mr-2" /> Chat on WhatsApp
+                    <Button className="bg-primary/90 hover:bg-primary thin-border text-xs sm:text-sm w-full sm:w-auto" onClick={() => openWhatsApp(h.phone)}>
+                      <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4 mr-2" /> Chat on WhatsApp
                     </Button>
                   </div>
                 ))}
@@ -48,15 +48,15 @@ export default function Contact() {
             </Card>
 
             {/* Map / Address */}
-            <div className="md:col-span-2 space-y-6">
+            <div className="md:col-span-2 space-y-4 sm:space-y-6">
               <Card className="thin-border">
-                <CardContent className="p-6 space-y-3">
+                <CardContent className="p-4 sm:p-6 space-y-3">
                   <div className="flex items-start gap-3">
                     <MapPin className="w-4 h-4 mt-1 text-primary" />
                     <div>
                       <div className="text-sm font-medium">Address</div>
-                      <div className="text-sm text-muted-foreground">Presidency International School, Chattogram, Bangladesh</div>
-                      <div className="text-sm text-muted-foreground mt-2 flex items-center gap-2">
+                      <div className="text-xs sm:text-sm text-muted-foreground">Presidency International School, Chattogram, Bangladesh</div>
+                      <div className="text-xs sm:text-sm text-muted-foreground mt-2 flex items-center gap-2">
                         <Mail className="w-3 h-3" />
                         hello@pimun.org
                       </div>

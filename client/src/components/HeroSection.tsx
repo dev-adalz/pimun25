@@ -45,7 +45,7 @@ function CountdownTimer({ targetDate }: CountdownProps) {
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 1.2, duration: 0.6 }}
-      className="flex gap-4 justify-center"
+      className="flex gap-2 sm:gap-4 justify-center flex-wrap"
     >
       {Object.entries(timeLeft).map(([unit, value], index) => (
         <motion.div
@@ -56,8 +56,8 @@ function CountdownTimer({ targetDate }: CountdownProps) {
           transition={{ delay: 0.1 * index, duration: 0.5 }}
           className="text-center"
         >
-          <div className="glass thin-border rounded-lg p-3 min-w-[70px]">
-            <div className="text-2xl font-bold font-serif text-foreground">{value}</div>
+          <div className="glass thin-border rounded-lg p-2 sm:p-3 min-w-[60px] sm:min-w-[70px]">
+            <div className="text-lg sm:text-xl md:text-2xl font-bold font-serif text-foreground">{value}</div>
             <div className="text-xs text-muted-foreground uppercase tracking-wider">
               {unit}
             </div>
@@ -104,33 +104,33 @@ export default function HeroSection() {
         <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(60% 60% at 50% 40%, rgba(212,175,55,0.05) 0%, rgba(0,0,0,0) 60%)" }} />
       </motion.div>
 
-      {/* Watermark Logo */}
+      {/* Watermark Logo - Hidden on mobile, visible on larger screens */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 z-5 pointer-events-none"
+        className="absolute top-1/2 right-2 md:right-4 transform -translate-y-1/2 z-5 pointer-events-none hidden sm:block"
       >
         <img
           src={logoUrl}
           alt="PIMUN Logo Watermark"
-          className="w-64 h-64 lg:w-80 lg:h-80 object-contain opacity-25"
+          className="w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80 object-contain opacity-20 md:opacity-25"
         />
       </motion.div>
 
       {/* Main Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
         {/* Logo/Badge */}
         <motion.div
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="mb-8"
+          className="mb-6 sm:mb-8"
         >
-          <div className="inline-flex items-center gap-2 glass thin-border px-4 py-2 rounded-full lgold-glow">
-            <Award className="w-4 h-4 text-primary" />
-            <span className="text-sm text-muted-foreground">Presidency International MUN Conference</span>
+          <div className="inline-flex items-center gap-2 glass thin-border px-3 py-2 sm:px-4 rounded-full lgold-glow">
+            <Award className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
+            <span className="text-xs sm:text-sm text-muted-foreground">Presidency International MUN Conference</span>
           </div>
         </motion.div>
 
@@ -140,7 +140,7 @@ export default function HeroSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl lg:text-7xl font-serif font-semibold mb-4 tracking-tight text-foreground"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-semibold mb-3 sm:mb-4 tracking-tight text-foreground leading-tight"
         >
           Presidency International MUN 2025
         </motion.h1>
@@ -151,7 +151,7 @@ export default function HeroSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 0.6 }}
-          className="text-base lg:text-lg text-muted-foreground mb-8"
+          className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-6 sm:mb-8 px-2"
         >
           Hosted by Presidency International School — November 28–30, 2025.
         </motion.p>
@@ -162,14 +162,13 @@ export default function HeroSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 0.6 }}
-          className="text-[15px] text-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed lgold-grad lgold-border rounded-md p-4"
+          className="text-sm sm:text-[15px] text-foreground/80 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed lgold-grad lgold-border rounded-md p-3 sm:p-4"
         >
           Become Diplomats Of Tomorrow.
-
         </motion.p>
 
         {/* Countdown Timer */}
-        <div className="mb-14">
+        <div className="mb-8 sm:mb-14">
           <CountdownTimer targetDate={conferenceDate} />
         </div>
 
@@ -183,11 +182,11 @@ export default function HeroSection() {
         >
           <Button
             size="lg"
-            className="min-h-14 text-[1.05rem] px-10 py-7 bg-primary/90 text-primary-foreground hover:bg-primary hover-elevate thin-border lgold-glow"
+            className="min-h-12 sm:min-h-14 text-base sm:text-[1.05rem] px-6 sm:px-10 py-4 sm:py-7 bg-primary/90 text-primary-foreground hover:bg-primary hover-elevate thin-border lgold-glow w-full sm:w-auto"
             data-testid="button-register-now"
             onClick={() => navigate('/registration')}
           >
-            <Users className="w-5 h-5 mr-2" />
+            <Users className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
             Register Now
           </Button>
         </motion.div>
@@ -198,18 +197,18 @@ export default function HeroSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 0.6 }}
-          className="mt-16 flex flex-wrap justify-center gap-8 text-sm text-muted-foreground"
+          className="mt-12 sm:mt-16 flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-8 text-xs sm:text-sm text-muted-foreground"
         >
-          <div className="flex items-center gap-2">
-            <Calendar className="w-4 h-4 text-primary" />
+          <div className="flex items-center justify-center gap-2">
+            <Calendar className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
             <span>November 28–30, 2025</span>
           </div>
-          <div className="flex items-center gap-2">
-            <Globe className="w-4 h-4 text-primary" />
+          <div className="flex items-center justify-center gap-2">
+            <Globe className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
             <span>International Delegates</span>
           </div>
-          <div className="flex items-center gap-2">
-            <Users className="w-4 h-4 text-primary" />
+          <div className="flex items-center justify-center gap-2">
+            <Users className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
             <span>400+ Participants</span>
           </div>
         </motion.div>

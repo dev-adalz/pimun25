@@ -47,7 +47,7 @@ export default function Navigation() {
             : 'bg-transparent'}
         `}
       >
-        <div className="max-w-7xl mx-auto px-6 py-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 sm:py-3">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <motion.div
@@ -56,14 +56,14 @@ export default function Navigation() {
               onClick={() => handleNavClick('/')}
               data-testid="nav-logo"
             >
-              <img src={logoUrl} alt="PIMUN25" className="w-9 h-9 rounded-lg thin-border object-cover" />
-              <span className="font-serif font-semibold text-[1.05rem] tracking-tight">
+              <img src={logoUrl} alt="PIMUN25" className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg thin-border object-cover" />
+              <span className="font-serif font-semibold text-sm sm:text-[1.05rem] tracking-tight">
                 PIMUN25
               </span>
             </motion.div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-6 xl:gap-8">
               {navItems.map((item, index) => (
                 <motion.a
                   key={item.name}
@@ -87,7 +87,7 @@ export default function Navigation() {
             <div className="hidden lg:flex items-center gap-3">
               <Button
                 size="sm"
-                className="bg-primary/90 text-primary-foreground hover:bg-primary hover-elevate thin-border"
+                className="bg-primary/90 text-primary-foreground hover:bg-primary hover-elevate thin-border text-sm"
                 onClick={() => handleNavClick('/registration')}
                 data-testid="nav-button-register"
               >
@@ -99,7 +99,7 @@ export default function Navigation() {
             <Button
               variant="ghost"
               size="sm"
-              className="lg:hidden text-foreground hover:text-primary"
+              className="lg:hidden text-foreground hover:text-primary p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               data-testid="nav-mobile-menu"
             >
@@ -122,7 +122,7 @@ export default function Navigation() {
               transition={{ duration: 0.2 }}
               className="lg:hidden glass thin-border"
             >
-              <div className="px-6 py-4 space-y-3">
+              <div className="px-4 sm:px-6 py-4 space-y-2">
                 {navItems.map((item, index) => (
                   <motion.a
                     key={item.name}
@@ -130,7 +130,7 @@ export default function Navigation() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.05 * index }}
                     href={item.href}
-                    className="block text-muted-foreground hover:text-foreground transition-colors py-2 border-b border-card-border/50 last:border-b-0"
+                    className="block text-muted-foreground hover:text-foreground transition-colors py-3 px-2 border-b border-card-border/50 last:border-b-0 text-base"
                     onClick={(e) => {
                       e.preventDefault();
                       handleNavClick(item.href);
@@ -144,7 +144,7 @@ export default function Navigation() {
                 {/* Mobile CTA Button */}
                 <div className="pt-4">
                   <Button
-                    className="w-full bg-primary/90 text-primary-foreground hover:bg-primary thin-border"
+                    className="w-full bg-primary/90 text-primary-foreground hover:bg-primary thin-border text-base py-3"
                     onClick={() => {
                       handleNavClick('/registration');
                     }}

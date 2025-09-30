@@ -56,20 +56,20 @@ export default function Registration() {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main className="pt-24 px-6">
+      <main className="pt-20 sm:pt-24 px-4 sm:px-6">
         {/* Sub-hero */}
-        <section className="max-w-6xl mx-auto mb-8">
-          <div className="glass thin-border rounded-xl p-6 lgold-glow">
-            <h1 className="text-3xl font-serif font-semibold">Registration</h1>
-            <p className="text-muted-foreground mt-2">Choose your role and complete your registration. Links open official Google Forms in a new tab.</p>
-            <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+        <section className="max-w-6xl mx-auto mb-6 sm:mb-8">
+          <div className="glass thin-border rounded-xl p-4 sm:p-6 lgold-glow">
+            <h1 className="text-2xl sm:text-3xl font-serif font-semibold">Registration</h1>
+            <p className="text-muted-foreground mt-2 text-sm sm:text-base">Choose your role and complete your registration. Links open official Google Forms in a new tab.</p>
+            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm">
               {roles.map(r => (
-                <div key={r.key} className="rounded-md thin-border p-3 flex items-center justify-between">
+                <div key={r.key} className="rounded-md thin-border p-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div className="flex items-center gap-2">
                     <r.icon className="w-4 h-4 text-primary" />
-                    <span className="font-medium">{r.title}</span>
+                    <span className="font-medium text-xs sm:text-sm">{r.title}</span>
                   </div>
-                  <span className="text-muted-foreground">Deadline: {r.deadline}</span>
+                  <span className="text-muted-foreground text-xs">Deadline: {r.deadline}</span>
                 </div>
               ))}
             </div>
@@ -79,11 +79,13 @@ export default function Registration() {
         {/* Role Tabs */}
         <section className="max-w-6xl mx-auto">
           <Tabs value={active} onValueChange={setActive}>
-            <TabsList className="mb-6 overflow-x-auto">
+            <TabsList className="mb-4 sm:mb-6 overflow-x-auto w-full justify-start">
               {roles.map((r) => (
-                <TabsTrigger key={r.key} value={r.key} className="whitespace-nowrap">
-                  <span className="inline-flex items-center gap-2">
-                    <r.icon className="w-4 h-4" /> {r.title}
+                <TabsTrigger key={r.key} value={r.key} className="whitespace-nowrap text-xs sm:text-sm">
+                  <span className="inline-flex items-center gap-1 sm:gap-2">
+                    <r.icon className="w-3 h-3 sm:w-4 sm:h-4" /> 
+                    <span className="hidden sm:inline">{r.title}</span>
+                    <span className="sm:hidden">{r.title.split(' ')[0]}</span>
                   </span>
                 </TabsTrigger>
               ))}
@@ -91,34 +93,34 @@ export default function Registration() {
           </Tabs>
 
           {/* Active Role Card */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
             {/* Left: Info */}
             <Card className="lg:col-span-1 thin-border lgold-glow">
-              <CardHeader>
+              <CardHeader className="p-4 sm:p-6">
                 <div className="flex items-center gap-3">
                   <activeRole.icon className="w-5 h-5 text-primary" />
-                  <h2 className="font-medium">{activeRole.title}</h2>
+                  <h2 className="font-medium text-sm sm:text-base">{activeRole.title}</h2>
                 </div>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground mb-4">{activeRole.blurb}</p>
+              <CardContent className="p-4 sm:p-6 pt-0">
+                <p className="text-xs sm:text-sm text-muted-foreground mb-4">{activeRole.blurb}</p>
                 <ul className="text-xs text-muted-foreground space-y-2">
-                  <li className="inline-flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-primary" /> Limited seats — apply early</li>
+                  <li className="inline-flex items-center gap-2"><CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-primary" /> Limited seats — apply early</li>
                   {activeRole.key === 'delegate' && (
                     <>
-                      <li className="inline-flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-primary" /> Confirmation within 5–7 days</li>
-                      <li className="inline-flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-primary" /> Payment link after shortlisting</li>
+                      <li className="inline-flex items-center gap-2"><CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-primary" /> Confirmation within 5–7 days</li>
+                      <li className="inline-flex items-center gap-2"><CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-primary" /> Payment link after shortlisting</li>
                     </>
                   )}
                 </ul>
               </CardContent>
-              <CardFooter className="flex flex-col gap-3">
-                <Button className="w-full bg-primary/90 hover:bg-primary lgold-glow" onClick={() => window.open(activeRole.form, "_blank")}>
-                  Registration Form <ExternalLink className="w-4 h-4 ml-2" />
+              <CardFooter className="flex flex-col gap-3 p-4 sm:p-6 pt-0">
+                <Button className="w-full bg-primary/90 hover:bg-primary lgold-glow text-sm sm:text-base py-3" onClick={() => window.open(activeRole.form, "_blank")}>
+                  Registration Form <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
                 </Button>
                 {activeRole.key === 'delegate' && (
-                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10" onClick={() => window.open(activeRole.paymentForm || activeRole.form, "_blank")}>
-                    Open Payment Confirmation Form <ExternalLink className="w-4 h-4 ml-2" />
+                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10 text-sm sm:text-base py-3" onClick={() => window.open(activeRole.paymentForm || activeRole.form, "_blank")}>
+                    Open Payment Confirmation Form <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
                   </Button>
                 )}
               </CardFooter>
@@ -126,15 +128,15 @@ export default function Registration() {
             
             {/* Right: Role-specific FAQs */}
             <Card className="lg:col-span-2 thin-border">
-              <CardHeader>
-                <h3 className="font-serif font-semibold">FAQs for {activeRole.title}</h3>
+              <CardHeader className="p-4 sm:p-6">
+                <h3 className="font-serif font-semibold text-sm sm:text-base">FAQs for {activeRole.title}</h3>
               </CardHeader>
-              <CardContent>
+              <CardContent className="p-4 sm:p-6 pt-0">
                 <Accordion type="single" collapsible>
                   {activeRole.faqs.map((f, idx) => (
                     <AccordionItem key={idx} value={`faq-${idx}`}>
-                      <AccordionTrigger>{f.q}</AccordionTrigger>
-                      <AccordionContent>{f.a}</AccordionContent>
+                      <AccordionTrigger className="text-xs sm:text-sm">{f.q}</AccordionTrigger>
+                      <AccordionContent className="text-xs sm:text-sm">{f.a}</AccordionContent>
                     </AccordionItem>
                   ))}
                 </Accordion>
@@ -143,19 +145,19 @@ export default function Registration() {
           </div>
 
           {/* How it works */}
-          <div className="mt-10 glass thin-border rounded-xl p-6">
-            <h3 className="font-serif font-semibold mb-3">How registration works</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-muted-foreground">
-              <div className="rounded-lg thin-border p-4">
-                <div className="font-medium text-foreground mb-1">1) Choose role</div>
+          <div className="mt-8 sm:mt-10 glass thin-border rounded-xl p-4 sm:p-6">
+            <h3 className="font-serif font-semibold mb-3 text-sm sm:text-base">How registration works</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground">
+              <div className="rounded-lg thin-border p-3 sm:p-4">
+                <div className="font-medium text-foreground mb-1 text-sm">1) Choose role</div>
                 Pick the role that best matches your interest and experience.
               </div>
-              <div className="rounded-lg thin-border p-4">
-                <div className="font-medium text-foreground mb-1">2) Fill the form</div>
+              <div className="rounded-lg thin-border p-3 sm:p-4">
+                <div className="font-medium text-foreground mb-1 text-sm">2) Fill the form</div>
                 Complete the Google Form with accurate details and preferences.
               </div>
-              <div className="rounded-lg thin-border p-4">
-                <div className="font-medium text-foreground mb-1">3) Get confirmation</div>
+              <div className="rounded-lg thin-border p-3 sm:p-4 sm:col-span-2 lg:col-span-1">
+                <div className="font-medium text-foreground mb-1 text-sm">3) Get confirmation</div>
                 Shortlisted candidates receive confirmation and payment instructions.
               </div>
             </div>

@@ -12,7 +12,7 @@ export const blogPosts: Record<string, BlogPost> = {
   "unsc-to-be": {
     slug: "unsc-to-be",
     title: "United Nations Security Council (UNSC)",
-    description: `**AGENDA:**  
+    description: `AGENDA:
 To be released soon`,
     body: `To be published soon`,
     image: images[1]
@@ -20,7 +20,7 @@ To be released soon`,
   "disec-to-be": {
     slug: "disec-to-be",
     title: "Disarmament and International Security (DISEC)",
-    description: `**AGENDA:**  
+    description: `AGENDA:  
 To be released soon`,
     body: `To be published soon`,
     image: images[2]
@@ -28,7 +28,7 @@ To be released soon`,
   "undp-to-be": {
     slug: "undp-to-be",
     title: "United Nations Development Programme (UNDP)",
-    description: `**AGENDA:**  
+    description: `AGENDA:  
 To be released soon`,
     body: `To be published soon`,
     image: images[3]
@@ -36,7 +36,7 @@ To be released soon`,
   "unhrc-to-be": {
     slug: "unhrc-to-be",
     title: "Human Rights Council (UNHRC)",
-    description: `**AGENDA:**  
+    description: `AGENDA:  
 To be released soon`,
     body: `To be published soon`,
     image: images[4]
@@ -44,7 +44,7 @@ To be released soon`,
   "icj-to-be": {
     slug: "icj-to-be",
     title: "International Court of Justice (ICJ)",
-    description: `**AGENDA:**  
+    description: `AGENDA:  
 To be released soon`,
     body: `To be published soon`,
     image: images[5]
@@ -52,7 +52,7 @@ To be released soon`,
   "fao-to-be": {
     slug: "fao-to-be",
     title: "Food and Agriculture Organization (FAO)",
-    description: `**AGENDA:**  
+    description: `AGENDA:  
 To be released soon`,
     body: `To be published soon`,
     image: images[6]
@@ -60,7 +60,7 @@ To be released soon`,
   "cbd-to-be": {
     slug: "cbd-to-be",
     title: "Convention on Biological Diversity (CBD)",
-    description: `**AGENDA:**  
+    description: `AGENDA:  
 To be released soon`,
     body: `To be published soon`,
     image: images[7]
@@ -68,7 +68,7 @@ To be released soon`,
   "ecosoc-to-be": {
     slug: "ecosoc-to-be",
     title: "Economic and Social Council (ECOSOC)",
-    description: `**AGENDA:**  
+    description: `AGENDA:  
 To be released soon`,
     body: `To be published soon`,
     image: images[8]
@@ -76,7 +76,7 @@ To be released soon`,
   "iaea-to-be": {
     slug: "iaea-to-be",
     title: "International Atomic Energy Agency (IAEA)",
-    description: `**AGENDA:**  
+    description: `AGENDA:  
 To be released soon`,
     body: `To be published soon`,
     image: images[9]
@@ -84,7 +84,7 @@ To be released soon`,
   "asean-to-be": {
     slug: "asean-to-be",
     title: "Association of Southeast Asian Nations (ASEAN)",
-    description: `**AGENDA:**  
+    description: `AGENDA:  
 To be released soon`,
     body: `To be published soon`,
     image: images[10]
@@ -92,7 +92,7 @@ To be released soon`,
   "ipc-to-be": {
     slug: "ipc-to-be",
     title: "International Press Corps (IPC)",
-    description: `**AGENDA:**  
+    description: `AGENDA:  
 To be released soon`,
     body: `To be published soon`,
     image: images[11]
@@ -100,7 +100,7 @@ To be released soon`,
   "big-to-be": {
     slug: "big-to-be",
     title: "Bangladesh Interim Government",
-    description: `**AGENDA:**  
+    description: `AGENDA:  
 To be released soon`,
     body: `To be published soon`,
     image: images[12]
@@ -108,7 +108,7 @@ To be released soon`,
   "mcc-to-be": {
     slug: "mcc-to-be",
     title: "Moving Crisis Committee (MCC)",
-    description: `**AGENDA:**  
+    description: `AGENDA:  
 To be released soon`,
     body: `To be published soon`,
     image: images[13]

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Globe, Calendar, Users, Award } from "lucide-react";
 import { useLocation } from "wouter";
 import logoUrl from "@assets/logo.png";
+import clubUrl from "@assets/club.png";
 import heroVideoUrl from "@assets/hero.mp4";
 import hallImg from "@assets/generated_images/Professional_MUN_conference_hall_6f29a800.png";
 
@@ -117,6 +118,19 @@ export default function HeroSection() {
           className="w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80 object-contain opacity-20 md:opacity-25"
         />
       </motion.div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        className="absolute top-1/2 left-2 md:left-4 transform -translate-y-1/2 z-5 pointer-events-none hidden sm:block"
+      >
+        <img
+          src={clubUrl}
+          alt="PIMUN Logo Watermark"
+          className="w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80 object-contain opacity-20 md:opacity-25"
+        />
+      </motion.div>
+
 
       {/* Main Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">

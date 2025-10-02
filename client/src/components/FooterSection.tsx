@@ -26,7 +26,7 @@ const sponsors = [
 ];
 
 const socialLinks = [
-  { icon: Facebook, href: "https://www.facebook.com/PresidencyMUNClub", label: "Events Page" },
+  { icon: Facebook, href: "https://www.facebook.com/events/3972249322926374/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D", label: "Events Page" },
   { icon: Facebook, href: "https://www.facebook.com/PresidencyMUNClub", label: "Club Page" },
   { icon: Instagram, href: "https://www.instagram.com/presidency.munclub/", label: "Instagram Page" },
   { icon: Mail, href: "mailto:presidencymun2025@gmail.com", label: "Email" }
@@ -115,7 +115,7 @@ export default function FooterSection() {
       >
         <div className="max-w-5xl mx-auto text-center">
           <h3 className="text-3xl lg:text-4xl font-serif font-bold text-foreground mb-4">
-          6. Join Us At PIMUN 2025!
+          Join Us At PIMUN 2025!
           </h3>
           <p className="text-lg text-muted-foreground mb-10 max-w-3xl mx-auto">
             Follow these simple steps to secure your place at the most prestigious MUN conference of 2025.

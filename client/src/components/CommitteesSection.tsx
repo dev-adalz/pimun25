@@ -37,7 +37,7 @@ const committeeSlugMap: Record<string, string> = {
 const committees: Committee[] = [
   {
     name: "United Nations Security Council (UNSC)",
-    agenda: "Agenda: To be released soon",
+    agenda: "Agenda: To Be Released Soon",
     type: "UN Principle Organization",
     difficulty: "Advanced",
     delegates: 50,
@@ -45,7 +45,7 @@ const committees: Committee[] = [
   },
   {
     name: "Disarmament and International Security (DISEC)",
-    agenda: "Agenda: To be released soon",
+    agenda: "Agenda: To Be Released Soon",
     type: "UN General Assembly",
     difficulty: "Intermediate",
     delegates: 50,
@@ -54,7 +54,7 @@ const committees: Committee[] = [
   },
   {
     name: "United Nations Development Programme (UNDP)",
-    agenda: "Agenda: To be released soon",
+    agenda: "Agenda: To Be Released Soon",
     type: "UN Specialised Agency",
     difficulty: "Beginner",
     delegates: 35,
@@ -63,7 +63,7 @@ const committees: Committee[] = [
   },
   {
     name: "United Nations Human Rights Council (UNHRC)",
-    agenda: "Agenda: To be released soon",
+    agenda: "Agenda: To Be Released Soon",
     type: "UN Body",
     difficulty: "Intermediate",
     delegates: 25,
@@ -71,7 +71,7 @@ const committees: Committee[] = [
   },
   {
     name: "International Court of Justice (ICJ)",
-    agenda: "Agenda: To be released soon",
+    agenda: "Agenda: To Be Released Soon",
     type: "UN Principle Organization",
     difficulty: "Advanced",
     delegates: 12,
@@ -79,7 +79,7 @@ const committees: Committee[] = [
   },
   {
     name: "Food and Agriculture Organization (FAO)",
-    agenda: "Agenda: To be released soon",
+    agenda: "Agenda: To Be Released Soon",
     type: "Specialized Agency",
     difficulty: "Beginner",
     delegates: 40,
@@ -87,7 +87,7 @@ const committees: Committee[] = [
   },
   {
     name: "Convention on Biological Diversity (CBD)",
-    agenda: "Agenda: To be released soon",
+    agenda: "Agenda: To Be Released Soon",
     type: "Treaty Body",
     difficulty: "Beginner",
     delegates: 30,
@@ -95,7 +95,7 @@ const committees: Committee[] = [
   },
   {
     name: "Economic and Social Council (ECOSOC)",
-    agenda: "Agenda: To be released soon",
+    agenda: "Agenda: To Be Released Soon",
     type: "UN Principle Organization",
     difficulty: "Beginner",
     delegates: 30,
@@ -103,7 +103,7 @@ const committees: Committee[] = [
   },
   {
     name: "International Atomic Energy Agency (IAEA)",
-    agenda: "Agenda: To be released soon",
+    agenda: "Agenda: To Be Released Soon",
     type: "Specialised Agency",
     difficulty: "Intermediate",
     delegates: 25,
@@ -111,7 +111,7 @@ const committees: Committee[] = [
   },
   {
     name: "Association of Southeast Asian Nations (ASEAN)",
-    agenda: "Agenda: To be released soon",
+    agenda: "Agenda: To Be Released Soon",
     type: "Regional Body",
     difficulty: "Beginner",
     delegates: 10,
@@ -119,7 +119,7 @@ const committees: Committee[] = [
   },
   {
     name: "International Press Corps (IPC)",
-    agenda: "Agenda: To be released soon",
+    agenda: "Agenda: To Be Released Soon",
     type: "Specialised committee",
     difficulty: "Intermediate",
     delegates: 20,
@@ -127,7 +127,7 @@ const committees: Committee[] = [
   },
   {
     name: "Interim Government of Bangladesh(GOB)",
-    agenda: "Agenda: To be released soon",
+    agenda: "Agenda: To Be Released Soon",
     type: "Specialised Committee",
     difficulty: "Advanced",
     delegates: 20,
@@ -135,7 +135,7 @@ const committees: Committee[] = [
   },
   {
     name: "Moving Crisis Committee (MCC)",
-    agenda: "Agenda: To be released soon",
+    agenda: "Agenda: To Be Released Soon",
     type: "Crisis Committee",
     difficulty: "Advanced",
     delegates: 18,

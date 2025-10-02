@@ -14,7 +14,6 @@ This repository contains the client (frontend) and server (backend) code, along 
   - [Prerequisites](#prerequisites)  
   - [Installation](#installation)  
   - [Running Locally](#running-locally)  
-  - [Environment Variables](#environment-variables)  
 - [Scripts](#scripts)  
 - [Deployment](#deployment)  
 - [Contributing](#contributing)  
@@ -30,7 +29,6 @@ You can view the live deployment here:
 
 - **Frontend / Client**: Next.js, React, React Hooks, Tailwind CSS  
 - **Backend / Server**: (if exists — e.g. Node.js / Next API routes / custom server)  
-- **Database / ORM**: Drizzle (configuration file `drizzle.config.ts`)  
 - **Styling**: Tailwind CSS  
 - **Build / Bundler**: Vite or Next.js internal build  
 - **TypeScript** throughout  
@@ -93,16 +91,6 @@ Here’s a brief description of core directories:
    yarn install
    ```
 
-### Environment Variables
-
-Create a `.env.local` file (in root or `client/` / `server/` as needed) with content like:
-
-```
-DATABASE_URL=<your_database_url>
-NEXT_PUBLIC_API_BASE_URL=<base_url_for_api>
-# other secrets / API keys
-```
-
 Adjust according to how your backend / frontend are configured.
 
 ### Running Locally
@@ -113,7 +101,7 @@ Run both client & server (if separate) or the Next.js app:
 npm run dev
 ```
 
-Then open `http://localhost:3000` in your browser.
+Then open `http://localhost:5000` in your browser.
 
 ## Scripts
 
@@ -150,10 +138,6 @@ Please follow these steps:
 You can also open issues to discuss ideas or propose changes.
 
 ## License
-
-Specify the license under which your code is distributed (e.g. MIT, Apache, etc.).  
-For example:
-
 ```
 MIT License
 ```
@@ -161,4 +145,4 @@ MIT License
 ## Contact
 
 Project maintained by *dev-adalz*.  
-Feel free to reach out via GitHub or email (if you want to provide your contact).
+Feel free to reach out via GitHub or email (adalzuhair.info@gmail.com).

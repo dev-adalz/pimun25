@@ -1,8 +1,10 @@
-
 # PIMUN25 Website
 
 A web application for **PIMUN ’25**, built using Next.js, React Hooks, and the Next.js router.  
 This repository contains the client (frontend) and server (backend) code, along with shared utilities.  
+
+<img width="1901" height="951" alt="Screenshot from 2025-10-03 02-39-43" src="https://github.com/user-attachments/assets/83054a1e-fec5-42d9-868a-5e8124dccfe0" />
+<img width="1901" height="951" alt="Screenshot from 2025-10-03 02-39-56" src="https://github.com/user-attachments/assets/664d73bd-43cf-4d94-a788-ed93faffa325" />
 
 ## Demo / Live Site
 

@@ -138,9 +138,9 @@ Please follow these steps:
 You can also open issues to discuss ideas or propose changes.
 
 ## License
-https://github.com/dev-adalz/pimun25#MIT-1-ov-file
+[MIT LICENSE](https://github.com/dev-adalz/pimun25#MIT-1-ov-file)
 
 ## Contact
 
-Project maintained by *dev-adalz*.  
+Project maintained by *dev-adalz* with ❤️.  
 Feel free to reach out via GitHub or email (adalzuhair.info@gmail.com).

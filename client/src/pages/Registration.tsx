@@ -6,21 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Crown, BadgeCheck, Megaphone, CheckCircle2, ExternalLink } from "lucide-react";
 import { useState } from "react";
 
-const roles = [
-  {
-    key: "eb",
-    title: "Executive Board",
-    icon: Crown,
-    blurb: "Lead with experience and guide committees.",
-    form: "https://forms.gle/",
-    paymentForm: "https://forms.gle/",
-    deadline: "Nov 10, 2025",
-    faqs: [
-      { q: "Who is eligible?", a: "Experienced MUN chairs and past EB preferred; strong debating background required." },
-      { q: "How are selections made?", a: "Profile review followed by brief interview for shortlisted candidates." },
-    ],
-  },
-  {
+const roles = [{
     key: "delegate",
     title: "Delegate",
     icon: BadgeCheck,
@@ -46,6 +32,19 @@ const roles = [
       { q: "Are there incentives?", a: "Certificates, recognition, and performance-based perks." },
     ],
   },
+  {
+    key: "eb",
+    title: "Executive Board",
+    icon: Crown,
+    blurb: "Lead with experience and guide committees.",
+    form: "https://forms.gle/",
+    paymentForm: "https://forms.gle/",
+    deadline: "Nov 10, 2025",
+    faqs: [
+      { q: "Who is eligible?", a: "Experienced MUN chairs and past EB preferred; strong debating background required." },
+      { q: "How are selections made?", a: "Profile review followed by brief interview for shortlisted candidates." },
+    ],
+  }
 ];
 
 export default function Registration() {

@@ -4,22 +4,6 @@
 A web application for **PIMUN ’25**, built using Next.js, React Hooks, and the Next.js router.  
 This repository contains the client (frontend) and server (backend) code, along with shared utilities.  
 
-## Table of Contents
-
-- [Demo / Live Site](#demo--live-site)  
-- [Tech Stack](#tech-stack)  
-- [Features](#features)  
-- [Repository Structure](#repository-structure)  
-- [Getting Started](#getting-started)  
-  - [Prerequisites](#prerequisites)  
-  - [Installation](#installation)  
-  - [Running Locally](#running-locally)  
-- [Scripts](#scripts)  
-- [Deployment](#deployment)  
-- [Contributing](#contributing)  
-- [License](#license)  
-- [Contact](#contact)  
-
 ## Demo / Live Site
 
 You can view the live deployment here:  

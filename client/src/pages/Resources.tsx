@@ -4,17 +4,17 @@ import { useLocation } from "wouter";
 
 const groups = [
   {
-    title: "Delegates",
+    title: "",
     items: [
-      { title: "Background Guides", desc: "Committee guides PDF.", href: "#" },
-      { title: "Position Paper Template", desc: "Editable doc template.", href: "#" },
+      { title: "to be released soon", desc: "", href: "#" },
+      { title: "to be released soon", desc: "", href: "#" },
     ],
   },
   {
-    title: "Conference",
+    title: "",
     items: [
-      { title: "Code of Conduct", desc: "Rules and policies.", href: "#" },
-      { title: "Schedule", desc: "Full timetable.", href: "#" },
+      { title: "To be released soon", desc: "", href: "#" },
+      { title: "to be released soon", desc: "", href: "#" },
     ],
   },
 ];
@@ -23,10 +23,7 @@ export default function Resources() {
   const [, navigate] = useLocation();
   const quickLinks = [
     { label: 'Registration', href: '/registration' },
-    { label: 'Committees & Agendas', href: '/#committees' },
-    { label: 'Schedule', href: '/schedule' },
-    { label: 'Accommodation', href: '/accommodation' },
-    { label: 'FAQs', href: '/faqs' },
+    { label: 'Committees & Agendas', href: '/#committees' }
   ];
 
   return (

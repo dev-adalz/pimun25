@@ -4,9 +4,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MessageCircle, MapPin, Phone, Mail } from "lucide-react";
 
 const hosts = [
-  { name: "Host 1", phone: "+8801711223344" },
-  { name: "Host 2", phone: "+8801812334455" },
-  { name: "Host 3", phone: "+8801913445566" },
+  { name: "Gyan Dipta Ghosh - Director General", phone: "+8801811546564" },
+  { name: "Sunehra Islam -  Team Delegate Affairs", phone: "+8801323933719" },
+  { name: "Mumtasin Fuaad - Team Delegate Afairs", phone: "+8801979293739" },
 ];
 
 export default function Contact() {
@@ -43,7 +43,7 @@ export default function Contact() {
                     </Button>
                   </div>
                 ))}
-                <div className="text-xs text-muted-foreground">Prefer email? Reach us at <span className="text-foreground inline-flex items-center gap-1"><Mail className="w-3 h-3" /> hello@pimun.org</span></div>
+                <div className="text-xs text-muted-foreground">Prefer email? Reach us at <span className="text-foreground inline-flex items-center gap-1"><Mail className="w-3 h-3" /> presidencymun2025@gmail.com</span></div>
               </CardContent>
             </Card>
 
@@ -58,7 +58,7 @@ export default function Contact() {
                       <div className="text-xs sm:text-sm text-muted-foreground">Presidency International School, Chattogram, Bangladesh</div>
                       <div className="text-xs sm:text-sm text-muted-foreground mt-2 flex items-center gap-2">
                         <Mail className="w-3 h-3" />
-                        hello@pimun.org
+                        presidencymun2025@gmail.com
                       </div>
                     </div>
                   </div>
@@ -73,7 +73,7 @@ export default function Contact() {
                       className="w-full h-full"
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.787902153316!2d91.7832!3d22.3569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd881b8df3b7b%3A0x0000000000000000!2sChattogram!5e0!3m2!1sen!2sbd!4v0000000000"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.8070194494267!2d91.83111587604445!3d22.36091444069413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd88496b3c78d%3A0xd3285fe97e157e1b!2sPresidency%20International%20School!5e0!3m2!1sen!2sbd!4v1759396595129!5m2!1sen!2sbd"
                     />
                   </div>
                 </CardContent>

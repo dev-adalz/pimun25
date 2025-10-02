@@ -9,26 +9,27 @@ import {
   Globe,
   Twitter,
   Linkedin,
-  Instagram
+  Instagram,
+  Facebook
 } from "lucide-react";
 import { useLocation } from "wouter";
 import logoUrl from "@assets/logo.png";
 
 // todo: replace with real sponsor data
 const sponsors = [
-  { name: "United Nations", logo: "UN", tier: "Platinum" },
-  { name: "World Bank", logo: "WB", tier: "Gold" },
-  { name: "European Union", logo: "EU", tier: "Gold" },
-  { name: "UNICEF", logo: "UC", tier: "Silver" },
-  { name: "Red Cross", logo: "RC", tier: "Silver" },
-  { name: "Amnesty International", logo: "AI", tier: "Bronze" }
+  { name: "", logo: "", tier: "Platinum" },
+  { name: "", logo: "", tier: "Gold" },
+  { name: "", logo: "", tier: "Gold" },
+  { name: "", logo: "", tier: "Silver" },
+  { name: "", logo: "", tier: "Silver" },
+  { name: "", logo: "", tier: "Bronze" }
 ];
 
 const socialLinks = [
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Mail, href: "#", label: "Email" }
+  { icon: Facebook, href: "https://www.facebook.com/PresidencyMUNClub", label: "Events Page" },
+  { icon: Facebook, href: "https://www.facebook.com/PresidencyMUNClub", label: "Club Page" },
+  { icon: Instagram, href: "https://www.instagram.com/presidency.munclub/", label: "Instagram Page" },
+  { icon: Mail, href: "mailto:presidencymun2025@gmail.com", label: "Email" }
 ];
 
 export default function FooterSection() {
@@ -62,9 +63,7 @@ export default function FooterSection() {
             <h3 className="text-2xl font-serif font-bold text-foreground mb-4">
               Our Partners & Sponsors
             </h3>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              PIMUN25 is made possible by the generous support of leading international organizations.
-            </p>
+          
           </motion.div>
 
           {/* Sponsors Grid */}
@@ -116,7 +115,7 @@ export default function FooterSection() {
       >
         <div className="max-w-5xl mx-auto text-center">
           <h3 className="text-3xl lg:text-4xl font-serif font-bold text-foreground mb-4">
-            Join Us At PIMUN25!
+          6. Join Us At PIMUN 2025!
           </h3>
           <p className="text-lg text-muted-foreground mb-10 max-w-3xl mx-auto">
             Follow these simple steps to secure your place at the most prestigious MUN conference of 2025.
@@ -173,7 +172,7 @@ export default function FooterSection() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Globe className="w-4 h-4 text-primary" />
-                  <span>50+ Countries Participating</span>
+                  <span>30+ schools Participating</span>
                 </div>
               </div>
             </motion.div>
@@ -227,7 +226,7 @@ export default function FooterSection() {
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Mail className="w-4 h-4 text-primary" />
-                  <span>info@pimun25.org</span>
+                  <span>presidencymun2025@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-primary" />

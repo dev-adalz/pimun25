@@ -7,7 +7,6 @@ import { ExternalLink, Users, FileText, Clock } from "lucide-react";
 import { useState } from "react";
 import { useLocation } from "wouter";
 
-// todo: replace with real committee data
 type Committee = {
   name: string;
   agenda: string;
@@ -18,20 +17,36 @@ type Committee = {
   description?: string;
 };
 
+// Mapping committee names to blog post slugs
+const committeeSlugMap: Record<string, string> = {
+  "United Nations Security Council (UNSC)": "unsc-to-be",
+  "Disarmament and International Security (DISEC)": "disec-to-be",
+  "United Nations Development Programme (UNDP)": "undp-to-be",
+  "Human Rights Council (UNHRC)": "unhrc-to-be",
+  "International Court of Justice (ICJ)": "icj-to-be",
+  "Food and Agriculture Organization (FAO)": "fao-to-be",
+  "Convention on Biological Diversity (CBD)": "cbd-to-be",
+  "Economic and Social Council (ECOSOC)": "ecosoc-to-be",
+  "International Atomic Energy Agency (IAEA)": "iaea-to-be",
+  "Association of Southeast Asian Nations (ASEAN)": "asean-to-be",
+  "International Press Corps (IPC)": "ipc-to-be",
+  "Bangladesh Interim Government": "big-to-be",
+  "Moving Crisis Committee (MCC)": "mcc-to-be"
+};
+
 const committees: Committee[] = [
   {
     name: "United Nations Security Council (UNSC)",
-    agenda: "Addressing Cybersecurity Threats to International Peace and Security",
-    type: "Crisis / Security Committee",
+    agenda: "To be released soon",
+    type: "UN Principle Organization",
     difficulty: "Advanced",
-    delegates: 15,
-    duration: "2 Days",
-    description: "UNSC addresses threats to international peace and security. This council will examine state and non-state cyber operations, deterrence, and international legal frameworks.",
+    delegates: 50,
+    duration: "3 Days",
   },
   {
     name: "Disarmament and International Security (DISEC)",
-    agenda: "Nuclear Non-Proliferation and Emerging Technologies",
-    type: "General Committee",
+    agenda: "To be released soon",
+    type: "UN general Assembly",
     difficulty: "Intermediate",
     delegates: 50,
     duration: "3 Days",
@@ -39,88 +54,88 @@ const committees: Committee[] = [
   },
   {
     name: "United Nations Development Programme (UNDP)",
-    agenda: "Sustainable Recovery and Post-Crisis Development",
-    type: "Specialized Committee / Programme",
-    difficulty: "Intermediate",
+    agenda: "To be released soon",
+    type: "UN Specialised agency",
+    difficulty: "Beginner",
     delegates: 35,
     duration: "2 Days",
     description: "UNDP explores resilient development pathways, financing mechanisms, and inclusive governance for post-crisis recovery.",
   },
   {
     name: "Human Rights Council (UNHRC)",
-    agenda: "Digital Rights, Privacy, and Freedom of Expression in the Information Age",
-    type: "Specialized Committee",
+    agenda: "To be released soon",
+    type: "UN Body",
     difficulty: "Intermediate",
     delegates: 25,
     duration: "2 Days"
   },
   {
     name: "International Court of Justice (ICJ)",
-    agenda: "Climate Change Litigation and the Application of International Law",
-    type: "Legal / Judicial Committee",
+    agenda: "To be released soon",
+    type: "UN Principle organization",
     difficulty: "Advanced",
     delegates: 12,
     duration: "3 Days"
   },
   {
     name: "Food and Agriculture Organization (FAO)",
-    agenda: "Ensuring Global Food Security Amidst Climate Shocks",
-    type: "Specialized Committee / Agency",
-    difficulty: "Intermediate",
+    agenda: "To be released soon",
+    type: "Specialized Agency",
+    difficulty: "Beginner",
     delegates: 40,
     duration: "2 Days"
   },
   {
     name: "Convention on Biological Diversity (CBD)",
-    agenda: "Biodiversity Loss, Ecosystem Restoration, and International Cooperation",
-    type: "Specialized Treaty Committee",
-    difficulty: "Intermediate",
+    agenda: "To be released soon",
+    type: "Treaty body",
+    difficulty: "Beginner",
     delegates: 30,
     duration: "2 Days"
   },
   {
     name: "Economic and Social Council (ECOSOC)",
-    agenda: "Global Supply Chain Resilience in the Post-Pandemic Era",
-    type: "Specialized / Functional Committee",
-    difficulty: "Intermediate",
+    agenda: "To be released soon",
+    type: "UN Principle Organization",
+    difficulty: "Beginner",
     delegates: 30,
     duration: "2 Days"
   },
   {
     name: "International Atomic Energy Agency (IAEA)",
-    agenda: "Nuclear Safety, Security, and Peaceful Uses of Nuclear Technology",
-    type: "Specialized / Technical Committee",
-    difficulty: "Advanced",
+    agenda: "To be released soon",
+    type: "Specialised agency",
+    difficulty: "Intermediate",
     delegates: 25,
     duration: "3 Days"
   },
   {
     name: "Association of Southeast Asian Nations (ASEAN)",
-    agenda: "Regional Governance, Security, and Climate Adaptation in Southeast Asia",
-    type: "Regional Committee",
-    difficulty: "Intermediate",
+    agenda: "To be released soon",
+    type: "Regional Body",
+    difficulty: "Beginner",
     delegates: 10,
     duration: "2 Days"
   },
   {
     name: "International Press Corps (IPC)",
-    agenda: "Assessing Global Food Crises and Early Warning Systems",
-    type: "Technical / Analytical Committee",
+    agenda: "To be released soon",
+    type: "Specialised committee",
     difficulty: "Intermediate",
     delegates: 20,
     duration: "2 Days"
   },
   {
     name: "Bangladesh Interim Government",
-    agenda: "Transition Governance, Security, and Constitutional Reform",
-    type: "Crisis Committee",
+    agenda: "To be released soon",
+    type: "specialised Committee",
     difficulty: "Advanced",
     delegates: 20,
     duration: "2 Days"
   },
   {
     name: "Moving Crisis Committee (MCC)",
-    agenda: "Rapid Escalation of Conflict / Humanitarian Crisis Response",
+    agenda: "To be released soon",
     type: "Crisis Committee",
     difficulty: "Advanced",
     delegates: 18,
@@ -158,8 +173,7 @@ export default function CommitteesSection() {
             Committees & Agendas
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Explore our diverse range of committees designed to challenge and inspire 
-            delegates at every level of experience.
+            Explore our range of committees designed to challenge and engage in meaningful debates at every level.
           </p>
         </motion.div>
 
@@ -201,37 +215,19 @@ export default function CommitteesSection() {
                     {committee.agenda}
                   </p>
 
-                  
-                  
-                {/* Action Button */}
+                  {/* Action Button */}
                   <Button 
                     variant="outline" 
                     size="sm" 
                     className="w-full group/btn hover:bg-primary hover:text-primary-foreground lgold-glow"
                     onClick={() => {
-                      const nameSlug = encodeURIComponent(
-                        committee.name
-                          .toLowerCase()
-                          .split(/[^a-z0-9]+/g)
-                          .filter(Boolean)
-                          .slice(0, 1)
-                          .join('-')
-                      );
-
-                      const agendaSlug = encodeURIComponent(
-                        committee.agenda
-                          .toLowerCase()
-                          .split(/[^a-z0-9]+/g)
-                          .filter(Boolean)
-                          .slice(0, 2)
-                          .join('-')
-                      );
-
-                      navigate(`/blog/${nameSlug}-${agendaSlug}`);
+                      const slug = committeeSlugMap[committee.name];
+                      if (slug) {
+                        navigate(`/blog/${slug}`);
+                      }
                     }}
                     data-testid={`button-committee-details-${index}`}
                   >
-
                     <FileText className="w-4 h-4 mr-2" />
                     View Details
                     <ExternalLink className="w-3 h-3 ml-2 opacity-0 group-hover/btn:opacity-100 transition-opacity" />

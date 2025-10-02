@@ -1,8 +1,10 @@
 import Navigation from "@/components/Navigation";
+import { images } from "@/lib/images";
+
 
 const past = [
-  { year: 2023, stats: "420 delegates · 6 committees", img: "https://placehold.co/800x450", desc: "Regional cooperation and economic resilience." },
-  { year: 2019, stats: "300 delegates · 5 committees", img: "https://placehold.co/800x450", desc: "Building a tradition of diplomacy and leadership." },
+  { year: 2023, stats: "300+ delegates", img: images[15], desc: "PIMUN 2023" },
+  { year: 2019, stats: "250+ delegates", img: images[14], desc: "PIMUN 2019" },
 ];
 
 export default function PastConferences() {

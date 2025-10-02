@@ -11,6 +11,8 @@ import img10 from "@/assets/images/10.png";
 import img11 from "@/assets/images/11.png";
 import img12 from "@/assets/images/12.png";
 import img13 from "@/assets/images/13.png";
+import mun19 from "@/assets/images/mun19.png";
+import mun23 from "@/assets/images/mun23.png";
 
 export const images = {
   1: img1,
@@ -25,5 +27,7 @@ export const images = {
   10: img10,
   11: img11,
   12: img12,
-  13: img13
+  13: img13,
+  14: mun19,
+  15: mun23
 };

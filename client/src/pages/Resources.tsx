@@ -4,17 +4,17 @@ import { useLocation } from "wouter";
 
 const groups = [
   {
-    title: "",
+    title: "Quick Links",
     items: [
-      { title: "to be released soon", desc: "", href: "#" },
-      { title: "to be released soon", desc: "", href: "#" },
+      { title: "Registration", desc: "Register Here", href: "/registration" },
+      { title: "Committees & Agendas", desc: "Discover Available Committees and Agendas", href: "/#committees" },
     ],
   },
   {
-    title: "",
+    title: "Docs",
     items: [
-      { title: "To be released soon", desc: "", href: "#" },
-      { title: "to be released soon", desc: "", href: "#" },
+      { title: "To Be Released Soon", desc: "Doc1", href: "#" },
+      { title: "To Be Released Soon", desc: "Doc2", href: "#" },
     ],
   },
 ];
@@ -36,31 +36,7 @@ export default function Resources() {
             <p className="text-muted-foreground mt-2">Prepare for success at PIMUN25.</p>
           </div>
 
-          {/* Quick Links */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 mb-8">
-            {quickLinks.map((q) => (
-              <a
-                key={q.label}
-                href={q.href}
-                className="block px-4 py-3 rounded-md thin-border hover-elevate bg-primary/5 border-primary/30 text-sm"
-                onClick={(e) => {
-                  e.preventDefault();
-                  if (q.href.startsWith('/#')) {
-                    navigate('/');
-                    setTimeout(() => {
-                      const el = document.getElementById(q.href.replace('/#',''));
-                      el?.scrollIntoView({ behavior: 'smooth' });
-                    }, 50);
-                  } else {
-                    navigate(q.href);
-                  }
-                }}
-              >
-                {q.label}
-              </a>
-            ))}
-          </div>
-
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {groups.map((g) => (
               <div key={g.title} className="glass thin-border rounded-xl p-5 lgold-glow">

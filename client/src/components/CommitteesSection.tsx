@@ -46,7 +46,7 @@ const committees: Committee[] = [
   {
     name: "Disarmament and International Security (DISEC)",
     agenda: "Agenda: To be released soon",
-    type: "UN general Assembly",
+    type: "UN General Assembly",
     difficulty: "Intermediate",
     delegates: 50,
     duration: "3 Days",
@@ -55,14 +55,14 @@ const committees: Committee[] = [
   {
     name: "United Nations Development Programme (UNDP)",
     agenda: "Agenda: To be released soon",
-    type: "UN Specialised agency",
+    type: "UN Specialised Agency",
     difficulty: "Beginner",
     delegates: 35,
     duration: "2 Days",
     description: "UNDP explores resilient development pathways, financing mechanisms, and inclusive governance for post-crisis recovery.",
   },
   {
-    name: "Human Rights Council (UNHRC)",
+    name: "United Nations Human Rights Council (UNHRC)",
     agenda: "Agenda: To be released soon",
     type: "UN Body",
     difficulty: "Intermediate",
@@ -72,7 +72,7 @@ const committees: Committee[] = [
   {
     name: "International Court of Justice (ICJ)",
     agenda: "Agenda: To be released soon",
-    type: "UN Principle organization",
+    type: "UN Principle Organization",
     difficulty: "Advanced",
     delegates: 12,
     duration: "3 Days"
@@ -88,7 +88,7 @@ const committees: Committee[] = [
   {
     name: "Convention on Biological Diversity (CBD)",
     agenda: "Agenda: To be released soon",
-    type: "Treaty body",
+    type: "Treaty Body",
     difficulty: "Beginner",
     delegates: 30,
     duration: "2 Days"
@@ -104,7 +104,7 @@ const committees: Committee[] = [
   {
     name: "International Atomic Energy Agency (IAEA)",
     agenda: "Agenda: To be released soon",
-    type: "Specialised agency",
+    type: "Specialised Agency",
     difficulty: "Intermediate",
     delegates: 25,
     duration: "3 Days"
@@ -126,9 +126,9 @@ const committees: Committee[] = [
     duration: "2 Days"
   },
   {
-    name: "Bangladesh Interim Government",
+    name: "Interim Government of Bangladesh(GOB)",
     agenda: "Agenda: To be released soon",
-    type: "specialised Committee",
+    type: "Specialised Committee",
     difficulty: "Advanced",
     delegates: 20,
     duration: "2 Days"

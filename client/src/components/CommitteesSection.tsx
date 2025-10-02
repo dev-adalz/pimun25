@@ -22,7 +22,7 @@ const committeeSlugMap: Record<string, string> = {
   "United Nations Security Council (UNSC)": "unsc-to-be",
   "Disarmament and International Security (DISEC)": "disec-to-be",
   "United Nations Development Programme (UNDP)": "undp-to-be",
-  "Human Rights Council (UNHRC)": "unhrc-to-be",
+  "United Nations Human Rights Council (UNHRC)": "unhrc-to-be", // Added "United Nations"
   "International Court of Justice (ICJ)": "icj-to-be",
   "Food and Agriculture Organization (FAO)": "fao-to-be",
   "Convention on Biological Diversity (CBD)": "cbd-to-be",
@@ -30,7 +30,7 @@ const committeeSlugMap: Record<string, string> = {
   "International Atomic Energy Agency (IAEA)": "iaea-to-be",
   "Association of Southeast Asian Nations (ASEAN)": "asean-to-be",
   "International Press Corps (IPC)": "ipc-to-be",
-  "Bangladesh Interim Government": "big-to-be",
+  "Interim Government of Bangladesh(GOB)": "big-to-be", // Fixed name and spacing
   "Moving Crisis Committee (MCC)": "mcc-to-be"
 };
 

@@ -229,8 +229,8 @@ export default function FooterSection() {
                   <span>presidencymun2025@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-primary" />
-                  <span>Chattogram, Bangladesh</span>
+                  <MapPin className="w-10 h-10 text-primary" />
+                  <span>Presidency International School, House # 51, Panchlaish R/A, Road # 2 ,Chittagong, Bangladesh.</span>
                 </div>
               </div>
             </motion.div>

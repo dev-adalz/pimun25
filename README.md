@@ -1,25 +1,10 @@
-
 # PIMUN25 Website
 
 A web application for **PIMUN ’25**, built using Next.js, React Hooks, and the Next.js router.  
 This repository contains the client (frontend) and server (backend) code, along with shared utilities.  
 
-## Table of Contents
-
-- [Demo / Live Site](#demo--live-site)  
-- [Tech Stack](#tech-stack)  
-- [Features](#features)  
-- [Repository Structure](#repository-structure)  
-- [Getting Started](#getting-started)  
-  - [Prerequisites](#prerequisites)  
-  - [Installation](#installation)  
-  - [Running Locally](#running-locally)  
-  - [Environment Variables](#environment-variables)  
-- [Scripts](#scripts)  
-- [Deployment](#deployment)  
-- [Contributing](#contributing)  
-- [License](#license)  
-- [Contact](#contact)  
+<img width="1901" height="951" alt="Screenshot from 2025-10-03 02-39-43" src="https://github.com/user-attachments/assets/83054a1e-fec5-42d9-868a-5e8124dccfe0" />
+<img width="1901" height="951" alt="Screenshot from 2025-10-03 02-39-56" src="https://github.com/user-attachments/assets/664d73bd-43cf-4d94-a788-ed93faffa325" />
 
 ## Demo / Live Site
 
@@ -30,7 +15,6 @@ You can view the live deployment here:
 
 - **Frontend / Client**: Next.js, React, React Hooks, Tailwind CSS  
 - **Backend / Server**: (if exists — e.g. Node.js / Next API routes / custom server)  
-- **Database / ORM**: Drizzle (configuration file `drizzle.config.ts`)  
 - **Styling**: Tailwind CSS  
 - **Build / Bundler**: Vite or Next.js internal build  
 - **TypeScript** throughout  
@@ -93,16 +77,6 @@ Here’s a brief description of core directories:
    yarn install
    ```
 
-### Environment Variables
-
-Create a `.env.local` file (in root or `client/` / `server/` as needed) with content like:
-
-```
-DATABASE_URL=<your_database_url>
-NEXT_PUBLIC_API_BASE_URL=<base_url_for_api>
-# other secrets / API keys
-```
-
 Adjust according to how your backend / frontend are configured.
 
 ### Running Locally
@@ -113,7 +87,7 @@ Run both client & server (if separate) or the Next.js app:
 npm run dev
 ```
 
-Then open `http://localhost:3000` in your browser.
+Then open `http://localhost:5000` in your browser.
 
 ## Scripts
 
@@ -150,15 +124,9 @@ Please follow these steps:
 You can also open issues to discuss ideas or propose changes.
 
 ## License
-
-Specify the license under which your code is distributed (e.g. MIT, Apache, etc.).  
-For example:
-
-```
-MIT License
-```
+[MIT LICENSE](https://github.com/dev-adalz/pimun25#MIT-1-ov-file)
 
 ## Contact
 
-Project maintained by *dev-adalz*.  
-Feel free to reach out via GitHub or email (if you want to provide your contact).
+Project maintained by *dev-adalz* with ❤️.  
+Feel free to reach out via GitHub or email (adalzuhair.info@gmail.com).

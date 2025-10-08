@@ -32,7 +32,7 @@ const committeeSlugMap: Record<string, string> = {
   "International Press Corps (IPC)": "ipc-to-be",
   "Interim Government of Bangladesh(GOB)": "big-to-be", // Fixed name and spacing
   "Moving Crisis Committee (MCC)": "mcc-to-be"
-};
+}; 
 
 const committees: Committee[] = [
   {

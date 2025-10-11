@@ -24,13 +24,52 @@ const roles = [{
     title: "Campus Ambassador",
     icon: Megaphone,
     blurb: "Become a voice of PIMUN25 at your campus.",
-    form: "https://forms.gle/",
+    form: "https://forms.gle/oUPLMmL7hh4F9idY9",
     paymentForm: "https://forms.gle/",
     deadline: "Nov 22, 2025",
     faqs: [
-      { q: "What is the commitment?", a: "2–3 hrs/week for outreach and onboarding until conference week." },
-      { q: "Are there incentives?", a: "Certificates, recognition, and performance-based perks." },
-    ],
+  {
+    q: "Will Campus Ambassadors receive a different award?",
+    a: "Yes! The Campus Ambassador who brings the highest number of delegates will receive the ‘Best CA’ award."
+  },
+  {
+    q: "Who can apply to be a Campus Ambassador?",
+    a: "Any enthusiastic student from a school or university is welcome to apply."
+  },
+  {
+    q: "Is there a minimum number of delegates I need to recruit?",
+    a: "While active promotion is encouraged, you’ll need to recruit at least 5 delegates from your institution for it to be recognized as a delegation."
+  },
+  {
+    q: "How do I register as a Campus Ambassador?",
+    a: "You can apply through the official CA registration form shared on our platforms."
+  },
+  {
+    q: "What are the responsibilities of a Campus Ambassador?",
+    a: "Promote PIMUN at your institution, encourage registrations, and act as a liaison between your campus and the organizing team."
+  },
+  {
+    q: "What are the benefits of being a Campus Ambassador?",
+    a: "Campus Ambassadors will receive certificates, recommendation letters, exclusive merchandise, and other rewards based on their performance."
+  },
+  {
+    q: "What if a Campus Ambassador cannot fulfill their duties?",
+    a: "Inform the MUN organizing team immediately. A replacement or role adjustment can be arranged if necessary."
+  },
+  {
+    q: "How should a Campus Ambassador handle delegate questions?",
+    a: "Provide general guidance, share official resources, and refer complex procedural or topic-related queries to the Executive Board (EB) or Secretariat."
+  },
+  {
+    q: "What if a Campus Ambassador faces low interest or engagement on campus?",
+    a: "Focus on one-on-one outreach and personal invitations. You can organize mini MUN sessions, workshops, or Q&A events at your institution to generate excitement."
+  },
+  {
+    q: "How can a Campus Ambassador increase participation?",
+    a: "Personally invite students instead of relying only on general announcements. Use social media, collaborate with clubs, teachers, and student organizations, and highlight the benefits of participating in PIMUN."
+  }
+]
+
   },
   {
     key: "eb",

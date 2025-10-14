@@ -12,7 +12,7 @@ const roles = [{
     icon: BadgeCheck,
     blurb: "Compete, collaborate, and represent your nation.",
     form: "https://forms.gle/eA7TcukzjZWUqeCj8",
-    deadline: "Nov 18, 2025",
+    deadline: "",
     faqs: [
     ],
   },
@@ -23,7 +23,7 @@ const roles = [{
     blurb: "Become a voice of PIMUN25 at your campus.",
     form: "https://forms.gle/JB3LqBrPTD2JDfGH9",
     paymentForm: "https://forms.gle/",
-    deadline: "Nov 22, 2025",
+    deadline: "",
     faqs: [
   {
     q: "Will Campus Ambassadors receive a different award?",
@@ -76,7 +76,7 @@ const roles = [{
     blurb: "Lead with experience and guide committees.",
     form: "https://forms.gle/R2nHAcC8x9GgsuCdA",
     paymentForm: "https://forms.gle/",
-    deadline: "Nov 10, 2025",
+    deadline: "",
     faqs: [
     ],
   }

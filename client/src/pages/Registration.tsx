@@ -11,12 +11,9 @@ const roles = [{
     title: "Delegate",
     icon: BadgeCheck,
     blurb: "Compete, collaborate, and represent your nation.",
-    form: "https://forms.gle/",
-    paymentForm: "https://forms.gle/",
+    form: "https://forms.gle/eA7TcukzjZWUqeCj8",
     deadline: "Nov 18, 2025",
     faqs: [
-      { q: "Do I need prior experience?", a: "Beginners welcome. Committees have mixed experience levels." },
-      { q: "Can I request a country?", a: "Yes. Preferences collected in the form; assignments are merit-based." },
     ],
   },
   {
@@ -77,12 +74,10 @@ const roles = [{
     title: "Executive Board",
     icon: Crown,
     blurb: "Lead with experience and guide committees.",
-    form: "https://forms.gle/",
+    form: "https://forms.gle/R2nHAcC8x9GgsuCdA",
     paymentForm: "https://forms.gle/",
     deadline: "Nov 10, 2025",
     faqs: [
-      { q: "Who is eligible?", a: "Experienced MUN chairs and past EB preferred; strong debating background required." },
-      { q: "How are selections made?", a: "Profile review followed by brief interview for shortlisted candidates." },
     ],
   }
 ];
@@ -157,11 +152,6 @@ export default function Registration() {
                 <Button className="w-full bg-primary/90 hover:bg-primary lgold-glow text-sm sm:text-base py-3" onClick={() => window.open(activeRole.form, "_blank")}>
                   Registration Form <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
                 </Button>
-                {activeRole.key === 'delegate' && (
-                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10 text-sm sm:text-base py-3" onClick={() => window.open(activeRole.paymentForm || activeRole.form, "_blank")}>
-                    Open Payment Confirmation Form <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
-                  </Button>
-                )}
               </CardFooter>
             </Card>
             

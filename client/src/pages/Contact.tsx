@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MessageCircle, MapPin, Phone, Mail } from "lucide-react";
 
 const hosts = [
-  { name: "Gyan Dipta Ghosh - Director General", phone: "+8801811546564" },
+  { name: "Gyan Dipta Ghosh - Core Team", phone: "+8801811546564" },
   { name: "Sunehra Islam -  Team Delegate Affairs", phone: "+8801323933719" },
   { name: "Mumtasin Fuaad - Team Delegate Affairs", phone: "+8801979293739" },
 ];

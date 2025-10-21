@@ -31,7 +31,10 @@ const committeeSlugMap: Record<string, string> = {
   "Association of Southeast Asian Nations (ASEAN)": "asean-to-be",
   "International Press Corps (IPC)": "ipc-to-be",
   "Interim Government of Bangladesh(GOB)": "big-to-be", // Fixed name and spacing
-  "Moving Crisis Committee (MCC)": "mcc-to-be"
+  "Moving Crisis Committee (MCC)": "mcc-to-be",
+  "United Nations Commission on the Status of Women (UNCSW)": "uncsw-to-be",
+  "Special Political and Decolonization Committee (SPECPOL)": "specpol-to-be"
+
 }; 
 
 const committees: Committee[] = [
@@ -140,6 +143,23 @@ const committees: Committee[] = [
     difficulty: "Advanced",
     delegates: 18,
     duration: "2 Days"
+  },
+  {
+    name: "United Nations Commission on the Status of Women (UNCSW)",
+    agenda: "Agenda: To Be Released Soon",
+    type: "UN Body",
+    difficulty: "Beginner",
+    delegates: 45,
+    duration: "2 Days",
+    description: ""
+  },
+  {
+    name: "Special Political and Decolonization Committee (SPECPOL)",
+    agenda: "Agenda: To Be Released Soon",
+    type: "UN General Assembly",
+    difficulty: "Intermediate",
+    delegates: 50,
+    duration: "3 Days"
   }
 ];
 

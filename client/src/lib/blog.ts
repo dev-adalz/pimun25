@@ -58,6 +58,7 @@ https://www.undp.org/
 https://www.undp.org/publications`,
     image: images[3]
   },
+  
   "unhrc-to-be": {
     slug: "unhrc-to-be",
     title: "Human Rights Council (UNHRC)",
@@ -214,7 +215,25 @@ The MCC follows structured procedures, including situation assessments, emergenc
 Learn more on:
 https://munuc.org/crisis/`,
     image: images[13]
-  }
+  },
+  "uncsw-to-be": {
+    slug: "uncsw-to-be",
+    title: "United Nations Commission on the Status of Women (UNCSW)",
+    description: `AGENDA:  
+To be released soon`,
+    body: `The UNCSW, or United Nations Commission on the Status of Women, a functional body of the Economic and Social Council (ECOSOC), the United Nations body on the Status of Women (UNCSW) was founded in 1946.  It was established to support worldwide women's growth and gender equality.
+
+UNCSW first concentrated on ensuring women's equal participation in public life and political rights.  Its mandate grew over time to cover topics including reproductive rights, economic development, and violence against women.  UNCSW now takes the lead in assessing the state of gender equality across the world, establishing international standards, and keeping an eye on how the Beijing Declaration and Platform for Action are being implemented.  For governments and civil society to advance women's rights globally, it continues to be an essential platform.`,
+    image: images[16]},
+  "specpol-to-be": {
+    slug: "specpol-to-be",
+    title: "Special Political and Decolonization Committee (SPECPOL)",
+    description: `AGENDA:  
+To be released soon`,
+    body: `In 1993, the Special Political Committee and the Decolonization Committee were combined to become the Special Political and Decolonization Committee, sometimes referred to as the Fourth Committee of the United Nations General Assembly or SPECPOL.  It addresses a broad spectrum of political matters outside the scope of other UN agencies.
+
+With a concentration on decolonization in the middle of the 20th century, when many countries pursued independence, SPECPOL's historical origins may be found in the early years of the UN. These days, SPECPOL covers issues including atomic radiation impacts, decolonization, space affairs, peacekeeping missions, and information sharing.  Its efforts support international collaboration, self-determination, and enduring peace.`,
+    image: images[17]}
 };
 
 export function toSlug(name: string, agenda: string): string {

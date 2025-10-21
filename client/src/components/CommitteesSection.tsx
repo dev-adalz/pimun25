@@ -73,14 +73,6 @@ const committees: Committee[] = [
     duration: "2 Days"
   },
   {
-    name: "International Court of Justice (ICJ)",
-    agenda: "Agenda: To Be Released Soon",
-    type: "UN Principle Organization",
-    difficulty: "Advanced",
-    delegates: 12,
-    duration: "3 Days"
-  },
-  {
     name: "Food and Agriculture Organization (FAO)",
     agenda: "Agenda: To Be Released Soon",
     type: "Specialized Agency",
@@ -125,14 +117,6 @@ const committees: Committee[] = [
     agenda: "Agenda: To Be Released Soon",
     type: "Specialised committee",
     difficulty: "Intermediate",
-    delegates: 20,
-    duration: "2 Days"
-  },
-  {
-    name: "Interim Government of Bangladesh(GOB)",
-    agenda: "Agenda: To Be Released Soon",
-    type: "Specialised Committee",
-    difficulty: "Advanced",
     delegates: 20,
     duration: "2 Days"
   },

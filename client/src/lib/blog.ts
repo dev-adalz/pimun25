@@ -9,28 +9,11 @@ export type BlogPost = {
 };
 
 export const blogPosts: Record<string, BlogPost> = {
-  "unsc-to-be": {
-    slug: "unsc-to-be",
-    title: "United Nations Security Council (UNSC)",
-    description: `AGENDA:
-To be released soon`,
-    body: `The United Nations Security Council is one of the principal organs of the United Nations and is responsible for maintaining international peace and security.
- 
-The Council is in charge of addressing many urgent global concerns, including armed conflicts, humanitarian crises, nuclear proliferation, and terrorism. Decisions often determine the course from war to peace, therefore giving the committee unrivaled importance.
- 
-The UNSC is composed of fifteen members. Among them are five permanent members (Russia, the United Kingdom, France, China, and the United States) and ten non-permanent. These members hold special authority, i.e., the power to vote on critical resolutions. The observer states without a current seat in the UNSC may participate in discussions but will lack any voting rights. The prominent works of the UNSC aren't exactly specific projects but rather are based on broader areas that include the maintenance of international security and peace, women's security, peacebuilding, and sustaining peace.
-
-Discover more at:
-https://main.un.org/securitycouncil/en
-https://www.cfr.org/backgrounder/un-security-council
-https://www.globalr2p.org`,
-    image: images[1]
-  },
-  "disec-to-be": {
+"disec-to-be": {
     slug: "disec-to-be",
     title: "Disarmament and International Security (DISEC)",
     description: `AGENDA:  
-To be released soon`,
+Regulation of the Development and Deployment of Artificial Intelligence and Autonomous Weapons Systems`,
     body: `The Disarmament and International Security Committee, or DISEC, was among the first major entities created after the United Nations was established after World War II to work for global peace, demilitarization and addressing emerging threats
 
 DISEC functions at the international level with old as well as new challenges. It has been conventionally engaged in controlling and limiting weapons of mass destruction, like nuclear, chemical, and biological weapons. It has now expanded its interests for new challenges like cybersecurity and artificial intelligence weapons, in tune with the dynamics of the ever-evolving global security situation.
@@ -46,7 +29,7 @@ More info:
     slug: "undp-to-be",
     title: "United Nations Development Programme (UNDP)",
     description: `AGENDA:  
-To be released soon`,
+Strengthening Resilience and Adaptive Capacity Against Climate Change in Line with SDG Goal 13`,
     body: `The United Nations Development Programme (UNDP) is the United Nations' global development network, actively operating in about 170 nations to tackle the world’s most pressing challenges.
 
 Think of being tasked with coming to a solution to poverty, inequality, and exclusion simultaneously. The UNDP’s mandate is precisely this: serving as the bridge that connects global expertise with local demands. It is the UNDP that has been the strategic engine for planning the sustainable structural change in the developing world.
@@ -63,7 +46,7 @@ https://www.undp.org/publications`,
     slug: "unhrc-to-be",
     title: "Human Rights Council (UNHRC)",
     description: `AGENDA:  
-To be released soon`,
+Combating the Human Rights Implications of Terrorism on Marginalized Populations`,
     body: `The United Nations Human Rights Council(UNHRC) is a key part of the United Nations whose mission is to promote and protect human rights from around the world.
     
 The UNHRC was established for the strengthening, promotion and protection of human rights worldwide. It has 47 member states, that play a prominent role in addressing human rights violations and country situations
@@ -75,28 +58,11 @@ https://www.ohchr.org/en/hrbodies/hrc/home
 https://www.ohchr.org/en/publications`,
     image: images[4]
   },
-  "icj-to-be": {
-    slug: "icj-to-be",
-    title: "International Court of Justice (ICJ)",
-    description: `AGENDA:  
-To be released soon`,
-    body: `The International Court of Justice (ICJ) is the main judicial body of the United Nations. It is often called the “World Court” as countries come here to resolve their disputes through international law instead of resorting to conflict or force.
-
-The ICJ fosters global trust. Nations depend on independent judges to make fair and balanced decisions that help maintain peace, justice, and stability around the world.
-
-Established in 1945, the Court has 15 judges elected by the UN General Assembly and the Security Council. Its cases cover a wide range of issues, from border disputes to human rights violations, and its rulings are binding on the involved countries. Over the years, the ICJ has played an important role in shaping international law. It settled the Somalia vs. Kenya maritime boundary case in 2021, is currently hearing South Africa vs. Israel under the Genocide Convention, and issued a landmark advisory opinion on climate change in 2025. This opinion highlighted the growing connection between environmental protection and global justice.
-Learn More:
-
-https://icj-cij.org/case/161
-https://media.un.org/unifeed/en/asset/d320/d3208555
-https://www.icj-cij.org/en-basic-toolkit`,
-    image: images[5]
-  },
   "fao-to-be": {
     slug: "fao-to-be",
     title: "Food and Agriculture Organization (FAO)",
     description: `AGENDA:  
-To be released soon`,
+Strengthening Global Food Security and Nutritional Resilience Amidst Global Instability`,
     body: `The Food and Agriculture Organization (FAO) is a United Nations agency dedicated to ending hunger, improving food security, and promoting sustainable farming.
     
 Since its founding in 1945, right after World War II, the FAO has brought nations together to rebuild food systems, support farmers, and ensure that everyone has access to safe and nutritious food. It serves as a global platform for countries to share knowledge, set international standards, and take collective action toward a world where no one goes to bed hungry.
@@ -112,7 +78,7 @@ https://www.fao.org/nobel-for-foodsecurity-peace/country-projects/en`,
     slug: "cbd-to-be",
     title: "Convention on Biological Diversity (CBD)",
     description: `AGENDA:  
-To be released soon`,
+Upholding Marine Ecosystem Resilience and Fisheries Sustainability through control of pollution and conservation of biodiversity`,
     body: `The Convention on Biological Diversity (CBD) is a global pact signed at the 1992 Earth Summit that happened in Rio de Janeiro with the goals of protecting and sustainably using the world’s biodiversity.
     
 The main focus of CBD is to conserve biodiversity, ensure that natural resources are being used sustainably so that an adequate amount is left behind for future generations, and to share the benefits of genetic natural resources equally with the countries they originally come from.
@@ -127,7 +93,7 @@ https://www.cbd.int/`,
     slug: "ecosoc-to-be",
     title: "Economic and Social Council (ECOSOC)",
     description: `AGENDA:  
-To be released soon`,
+Implementation and Role of a Circular Economy in Achieving Sustainable Development`,
     body: `The Economic and Social Council (ECOSOC) is one of the main six organs of the United Nations and is responsible for managing the United Nation’s economic, social, and environmental operations
 
 It operates 15 United Nations expert agencies and a collection of working commissions, fostering to fight present global issues such as poverty, sustainable development, and human needs emergencies.
@@ -143,7 +109,7 @@ https://sdgs.un.org/goals`,
     slug: "iaea-to-be",
     title: "International Atomic Energy Agency (IAEA)",
     description: `AGENDA:  
-To be released soon`,
+Regulations Concerning Nuclear Technology and Its Emerging Applications`,
     body: `The International Atomic Energy Agency (IAEA) is a self-governing United Nations intergovernmental organization founded in 1957 that plays a central role in monitoring nuclear weapons production and nonproliferation.
     
 In a world where nuclear technology can power food growth, energize urban society, and treat diseases, but whose abuse can threaten global security. The IAEA's task is to avoid global threats, promote cooperation, and assist nations in deriving gains from nuclear technology in a beneficial manner.
@@ -155,86 +121,16 @@ https://www.iaea.org
 https://www.iaea.org/publications`,
     image: images[9]
   },
-  "asean-to-be": {
-    slug: "asean-to-be",
-    title: "Association of Southeast Asian Nations (ASEAN)",
-    description: `AGENDA:  
-To be released soon`,
-    body: `The Association of Southeast Asian Nations (ASEAN) is a regional group that brings together ten countries in Southeast Asia to collaborate on peace, stability, and shared growth. It serves as a platform where nations work together on trade, education, security, and climate action, making the region stronger.
-
-ASEAN emerged from a need for unity during a time of uncertainty and tension in the 1960s. Its founders aimed to ensure that Southeast Asia could depend on cooperation rather than conflict. Over the years, it has become an important player in global diplomacy, linking Asia with the rest of the world through partnerships and discussions in forums like the East Asia Summit and the ASEAN Regional Forum.
-
-Established on August 8, 1967, with the signing of the Bangkok Declaration by Indonesia, Malaysia, the Philippines, Singapore, and Thailand, ASEAN now includes ten member states. The organization operates on principles of consensus and mutual respect, meaning decisions are made together. From creating the ASEAN Free Trade Area to pursuing the ASEAN Community Vision 2025 and coordinating regional disaster relief, ASEAN continues to foster a more connected, resilient, and peaceful Southeast Asia.
-
-Learn more:
-https://asean.org
-https://asean.org/publications`,
-    image: images[10]
-  },
-  "ipc-to-be": {
-    slug: "ipc-to-be",
-    title: "International Press Corps (IPC)",
-    description: `AGENDA:  
-To be released soon`,
-    body: `The International Press Corps (IPC) includes journalists and media professionals who are authorized to cover the United Nations. They serve as a crucial connection between the UN and the world. They ensure that the organization’s work, from peacekeeping missions and humanitarian aid to global diplomacy, reaches people accurately, quickly, and widely.
-    
-The IPC exists because decisions made at the UN impact millions of lives. However, their effects depend on people understanding these decisions. By reporting on debates, resolutions, and conferences, IPC journalists keep the public informed. They hold leaders accountable and encourage discussions about important international issues.
-
-With UN authorization, IPC members have access to briefings, press conferences, and high-level meetings. Their stories, analyses, and coverage promote transparency, raise awareness of key issues, and make sure that the actions of nations and global leaders are visible and understandable around the world.
-
-Discover more on:
-https://www.munum.org/ipc`,
-    image: images[11]
-  },
-  "big-to-be": {
-    slug: "big-to-be",
-    title: "Bangladesh Interim Government",
-    description: `AGENDA:  
-To be released soon`,
-    body: `Beyond the wide-ranging policies lies this advanced committee of the interim government, which aims to implement high-level strategies. This committee drafts the precise schematics for a refined state.
-
-An interim government arrives with the hope of a political renewal, with the purpose of engineering the core infrastructure. It addresses everything from fiscal administration to law and order. It exists to preempt challenges and construct a seamless functional blueprint, ensuring the interim period is defined by competence and order, not chaos.
-
-Bangladesh’s interim government system was created to solve a crisis of trust in elections. The landmark 1996 constitutional amendment established a neutral, non-partisan Caretaker Government (NCG), typically led by a retired Chief Justice, to supervise national polls for 90 days. This secured smooth power transfers for over a decade. However, the system was banned in 2011 as a consequence of a controversial martial law. This agreement is rejected by the opposition as a conflict of interest, causing them to boycott polls and creating an ongoing political crisis.
-
-Discover more about the Interim Government at:
-https://blogs.loc.gov/law/2024/08/interim-government-and-the-constitution-of-bangladesh/`,
-    image: images[12]
-  },
-  "mcc-to-be": {
-    slug: "mcc-to-be",
-    title: "Moving Crisis Committee (MCC)",
-    description: `AGENDA:  
-To be released soon`,
-    body: `The Moving Crisis Committee (MCC) is a specific group within the United Nations that focuses on urgent and rapidly changing global crises. It acts as a central platform for nations and experts to come together, respond quickly, coordinate actions, and lessen the effects of conflicts, natural disasters, and humanitarian emergencies.
-
-The MCC exists because crises can escalate quickly, impacting millions of lives if not handled well. By uniting member states, humanitarian organizations, and technical experts, the committee makes sure decisions are informed, timely, and practical. Its work helps governments and agencies act decisively while ensuring international cooperation and accountability.
-
-The MCC follows structured procedures, including situation assessments, emergency briefings, and coordination meetings. It creates action plans, gathers resources, and monitors responses to ongoing crises. Through its efforts, the MCC boosts global preparedness, promotes collaboration, and ensures urgent crises are handled efficiently and effectively.
-
-Learn more on:
-https://munuc.org/crisis/`,
-    image: images[13]
-  },
   "uncsw-to-be": {
     slug: "uncsw-to-be",
     title: "United Nations Commission on the Status of Women (UNCSW)",
     description: `AGENDA:  
-To be released soon`,
+Ensuring and Strengthening Access to Justice for All Women and Girls in Regards to Gender-Based Violence`,
     body: `The UNCSW, or United Nations Commission on the Status of Women, a functional body of the Economic and Social Council (ECOSOC), the United Nations body on the Status of Women (UNCSW) was founded in 1946.  It was established to support worldwide women's growth and gender equality.
 
 UNCSW first concentrated on ensuring women's equal participation in public life and political rights.  Its mandate grew over time to cover topics including reproductive rights, economic development, and violence against women.  UNCSW now takes the lead in assessing the state of gender equality across the world, establishing international standards, and keeping an eye on how the Beijing Declaration and Platform for Action are being implemented.  For governments and civil society to advance women's rights globally, it continues to be an essential platform.`,
     image: images[16]},
-  "specpol-to-be": {
-    slug: "specpol-to-be",
-    title: "Special Political and Decolonization Committee (SPECPOL)",
-    description: `AGENDA:  
-To be released soon`,
-    body: `In 1993, the Special Political Committee and the Decolonization Committee were combined to become the Special Political and Decolonization Committee, sometimes referred to as the Fourth Committee of the United Nations General Assembly or SPECPOL.  It addresses a broad spectrum of political matters outside the scope of other UN agencies.
-
-With a concentration on decolonization in the middle of the 20th century, when many countries pursued independence, SPECPOL's historical origins may be found in the early years of the UN. These days, SPECPOL covers issues including atomic radiation impacts, decolonization, space affairs, peacekeeping missions, and information sharing.  Its efforts support international collaboration, self-determination, and enduring peace.`,
-    image: images[17]}
-};
+  };
 
 export function toSlug(name: string, agenda: string): string {
   return name

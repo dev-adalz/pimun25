@@ -39,16 +39,8 @@ const committeeSlugMap: Record<string, string> = {
 
 const committees: Committee[] = [
   {
-    name: "United Nations Security Council (UNSC)",
-    agenda: "Agenda: To Be Released Soon",
-    type: "UN Principle Organization",
-    difficulty: "Advanced",
-    delegates: 50,
-    duration: "3 Days",
-  },
-  {
     name: "Disarmament and International Security (DISEC)",
-    agenda: "Agenda: To Be Released Soon",
+    agenda: "Agenda: Regulation of the Development and Deployment of Artificial Intelligence and Autonomous Weapons Systems",
     type: "UN General Assembly",
     difficulty: "Intermediate",
     delegates: 50,
@@ -57,7 +49,7 @@ const committees: Committee[] = [
   },
   {
     name: "United Nations Development Programme (UNDP)",
-    agenda: "Agenda: To Be Released Soon",
+    agenda: "Agenda: Strengthening Resilience and Adaptive Capacity Against Climate Change in Line with SDG Goal 13",
     type: "UN Specialised Agency",
     difficulty: "Beginner",
     delegates: 35,
@@ -66,7 +58,7 @@ const committees: Committee[] = [
   },
   {
     name: "United Nations Human Rights Council (UNHRC)",
-    agenda: "Agenda: To Be Released Soon",
+    agenda: "Agenda:Combating the Human Rights Implications of Terrorism on Marginalized Populations",
     type: "UN Body",
     difficulty: "Intermediate",
     delegates: 25,
@@ -74,7 +66,7 @@ const committees: Committee[] = [
   },
   {
     name: "Food and Agriculture Organization (FAO)",
-    agenda: "Agenda: To Be Released Soon",
+    agenda: "Agenda: Strengthening Global Food Security and Nutritional Resilience Amidst Global Instability",
     type: "Specialized Agency",
     difficulty: "Beginner",
     delegates: 40,
@@ -82,7 +74,7 @@ const committees: Committee[] = [
   },
   {
     name: "Convention on Biological Diversity (CBD)",
-    agenda: "Agenda: To Be Released Soon",
+    agenda: "Agenda: Upholding Marine Ecosystem Resilience and Fisheries Sustainability through control of pollution and conservation of biodiversity",
     type: "Treaty Body",
     difficulty: "Beginner",
     delegates: 30,
@@ -90,60 +82,20 @@ const committees: Committee[] = [
   },
   {
     name: "Economic and Social Council (ECOSOC)",
-    agenda: "Agenda: To Be Released Soon",
+    agenda: "Agenda: Implementation and Role of a Circular Economy in Achieving Sustainable Development",
     type: "UN Principle Organization",
     difficulty: "Beginner",
     delegates: 30,
     duration: "2 Days"
   },
   {
-    name: "International Atomic Energy Agency (IAEA)",
-    agenda: "Agenda: To Be Released Soon",
-    type: "Specialised Agency",
-    difficulty: "Intermediate",
-    delegates: 25,
-    duration: "3 Days"
-  },
-  {
-    name: "Association of Southeast Asian Nations (ASEAN)",
-    agenda: "Agenda: To Be Released Soon",
-    type: "Regional Body",
-    difficulty: "Beginner",
-    delegates: 10,
-    duration: "2 Days"
-  },
-  {
-    name: "International Press Corps (IPC)",
-    agenda: "Agenda: To Be Released Soon",
-    type: "Specialised committee",
-    difficulty: "Intermediate",
-    delegates: 20,
-    duration: "2 Days"
-  },
-  {
-    name: "Moving Crisis Committee (MCC)",
-    agenda: "Agenda: To Be Released Soon",
-    type: "Crisis Committee",
-    difficulty: "Advanced",
-    delegates: 18,
-    duration: "2 Days"
-  },
-  {
     name: "United Nations Commission on the Status of Women (UNCSW)",
-    agenda: "Agenda: To Be Released Soon",
+    agenda: "Agenda: Ensuring and Strengthening Access to Justice for All Women and Girls in Regards to Gender-Based Violence",
     type: "UN Body",
     difficulty: "Beginner",
     delegates: 45,
     duration: "2 Days",
     description: ""
-  },
-  {
-    name: "Special Political and Decolonization Committee (SPECPOL)",
-    agenda: "Agenda: To Be Released Soon",
-    type: "UN General Assembly",
-    difficulty: "Intermediate",
-    delegates: 50,
-    duration: "3 Days"
   }
 ];
 

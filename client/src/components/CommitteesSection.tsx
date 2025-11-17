@@ -39,6 +39,15 @@ const committeeSlugMap: Record<string, string> = {
 
 const committees: Committee[] = [
   {
+    name: "United Nations Security Council (UNSC)",
+    agenda: "Agenda: Open Agenda",
+    type: "UN Principle Organization",
+    difficulty: "Advanced",
+    delegates: 50,
+    duration: "3 Days",
+  },
+
+  {
     name: "Disarmament and International Security (DISEC)",
     agenda: "Agenda: Regulation of the Development and Deployment of Artificial Intelligence and Autonomous Weapons Systems",
     type: "UN General Assembly",
@@ -96,6 +105,46 @@ const committees: Committee[] = [
     delegates: 45,
     duration: "2 Days",
     description: ""
+  },
+   {
+    name: "International Atomic Energy Agency (IAEA)",
+    agenda: "Agenda: Regulations Concerning Nuclear Technology and Its Emerging Applications",
+    type: "Specialised Agency",
+    difficulty: "Intermediate",
+    delegates: 25,
+    duration: "3 Days"
+  },
+  {
+    name: "Association of Southeast Asian Nations (ASEAN)",
+    agenda: "Agenda: Open Agenda",
+    type: "Regional Body",
+    difficulty: "Beginner",
+    delegates: 10,
+    duration: "2 Days"
+  },
+  {
+    name: "International Press Corps (IPC)",
+    agenda: "Agenda: Open Agenda",
+    type: "Specialised committee",
+    difficulty: "Intermediate",
+    delegates: 20,
+    duration: "2 Days"
+  },
+  {
+    name: "Moving Crisis Committee (MCC)",
+    agenda: "Agenda: Open Agenda",
+    type: "Crisis Committee",
+    difficulty: "Advanced",
+    delegates: 18,
+    duration: "2 Days"
+  },
+  {
+    name: "Special Political and Decolonization Committee (SPECPOL)",
+    agenda: "Agenda: Open Agenda",
+    type: "UN General Assembly",
+    difficulty: "Intermediate",
+    delegates: 50,
+    duration: "3 Days"
   }
 ];
 

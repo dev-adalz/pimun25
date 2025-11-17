@@ -81,6 +81,10 @@ export default function Contact() {
             </div>
           </div>
         </section>
+        <div className="fixed bottom-1 right-2 opacity 1 text-[8px] select-none pointer-events-none">
+  Made with passion by Adal Zuhair & Md. Hafizullah
+</div>
+
       </main>
     </div>
   );

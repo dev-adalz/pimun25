@@ -115,14 +115,6 @@ const committees: Committee[] = [
     duration: "3 Days"
   },
   {
-    name: "Association of Southeast Asian Nations (ASEAN)",
-    agenda: "Agenda: Open Agenda",
-    type: "Regional Body",
-    difficulty: "Beginner",
-    delegates: 10,
-    duration: "2 Days"
-  },
-  {
     name: "International Press Corps (IPC)",
     agenda: "Agenda: Open Agenda",
     type: "Specialised committee",
@@ -137,15 +129,8 @@ const committees: Committee[] = [
     difficulty: "Advanced",
     delegates: 18,
     duration: "2 Days"
-  },
-  {
-    name: "Special Political and Decolonization Committee (SPECPOL)",
-    agenda: "Agenda: Open Agenda",
-    type: "UN General Assembly",
-    difficulty: "Intermediate",
-    delegates: 50,
-    duration: "3 Days"
   }
+ 
 ];
 
 export default function CommitteesSection() {

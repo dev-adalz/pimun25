@@ -79,6 +79,12 @@ const groups = [
         href: "https://drive.google.com/file/d/19ajDYhY25ndXJ4IWWPRV8CobykC5SSY8/view?usp=sharing", 
         type: "external" 
       },
+      { 
+        title: "Committee Allocation List - IAEA", 
+        desc: "look through to find your name in the allocation", 
+        href: "https://drive.google.com/file/d/1zo2hbM5xDgMMh8Teg-7gcg_KmNOYJLTM/view?usp=sharing", 
+        type: "external" 
+      },
 
       
     ],

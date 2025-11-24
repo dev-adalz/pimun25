@@ -1,5 +1,7 @@
 import { ExternalLink } from "lucide-react";
 import { useLocation } from "wouter";
+import Navigation from "@/components/Navigation";
+
 
 const groups = [
   {
@@ -131,6 +133,7 @@ const groups = [
 ];
 
 export default function Resources() {
+  
   const [, navigate] = useLocation();
   
   const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, item: any) => {
@@ -161,7 +164,7 @@ export default function Resources() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation component would go here */}
+      <Navigation />
       <main className="pt-24 px-6">
         <section className="max-w-6xl mx-auto">
           <div className="glass thin-border rounded-xl p-6 lgold-glow mb-8">

@@ -5,7 +5,7 @@ import { MessageCircle, MapPin, Phone, Mail } from "lucide-react";
 
 const hosts = [
   { name: "Gyan Dipta Ghosh - Core Team", phone: "+8801811546564" },
-  { name: "Mumtasin Fuaad - Team Delegate Affairs", phone: "+8801979293739" }
+  { name: "Samiha Zohra - Team Delegate Affairs", phone: "+8801817795779" }
 ];
 
 export default function Contact() {

@@ -7,22 +7,50 @@ import {
   MapPin, 
   Calendar,
   Globe,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Facebook
+  Facebook,
+  Instagram
 } from "lucide-react";
 import { useLocation } from "wouter";
 import logoUrl from "@assets/logo.png";
 
-// todo: replace with real sponsor data
+// Helper function to convert Google Drive URLs
+const convertGoogleDriveUrl = (url: string): string => {
+  if (!url) return "";
+  
+  if (url.includes("lh3.googleusercontent.com") || url.includes("drive.google.com/thumbnail") || url.includes("drive.google.com/uc")) {
+    return url;
+  }
+  
+  if (!url.includes("/") && !url.includes("http")) {
+    return `https://drive.google.com/uc?export=view&id=${url}`;
+  }
+  
+  const patterns = [
+    /\/file\/d\/([^\/]+)\//,
+    /\/d\/([^\/]+)\//,
+    /id=([^&]+)/,
+    /folders\/([^?]+)/,
+    /open\?id=([^&]+)/
+  ];
+  
+  for (const pattern of patterns) {
+    const match = url.match(pattern);
+    if (match && match[1]) {
+      return `https://drive.google.com/uc?export=view&id=${match[1]}`;
+    }
+  }
+  
+  return url;
+};
+
 const sponsors = [
-  { name: "", logo: "", tier: "Platinum" },
-  { name: "", logo: "", tier: "Gold" },
-  { name: "", logo: "", tier: "Gold" },
-  { name: "", logo: "", tier: "Silver" },
-  { name: "", logo: "", tier: "Silver" },
-  { name: "", logo: "", tier: "Bronze" }
+  { name: "KDS", logo: "12P5PJl8hN8fWtk1w8QTvH9N7fvC5t5l6", tier: "", link: "http://www.kdsgroup.net/" },
+  { name: "Asian", logo: "1NQ2TgNTbo8Mq4xau5RD9NRVq-JNUTYxM", tier: "", link: "" },
+  { name: "Chattogram City Corporation", logo: "1EOVE4Usx4D6nVwOQFMwyIUIEWhMoMh0q", tier: "", link: "" },
+  { name: "Pushti", logo: "", tier: "Silver", link: "" },
+  { name: "P2p Wecon", logo: "1yCbT5CbONyFxWXQSoI67LIrEJ4xxb8Or", tier: "", link: "" },
+  { name: "Mentors", logo: "1v2rPlot-kqzm5IVhaPTXW84BA-hh8HxR", tier: "", link: "" },
+  { name: "United Nations Bangladesh", logo: "1m0cqEJLXQz6XYUiocmO9oU-13NGREYow", tier: "Strategic Partner", link: "" }
 ];
 
 const socialLinks = [
@@ -63,7 +91,6 @@ export default function FooterSection() {
             <h3 className="text-2xl font-serif font-bold text-foreground mb-4">
               Our Partners & Sponsors
             </h3>
-          
           </motion.div>
 
           {/* Sponsors Grid */}
@@ -78,28 +105,50 @@ export default function FooterSection() {
                   delay: index * 0.1,
                   ease: "easeOut"
                 }}
-                className="relative group cursor-pointer"
+                className="relative group"
                 data-testid={`sponsor-${index}`}
               >
-                <div className="flex flex-col items-center gap-2">
-                  {/* Logo Placeholder */}
-                  <div className={`
-                    w-16 h-16 rounded-lg border-2 flex items-center justify-center
-                    font-bold text-lg transition-all duration-300 group-hover:scale-110
-                    ${getTierColor(sponsor.tier)}
-                    grayscale group-hover:grayscale-0
-                  `}>
-                    {sponsor.logo}
+                <a 
+                  href={sponsor.link || undefined}
+                  className={`block ${sponsor.link ? 'cursor-pointer' : 'cursor-default'}`}
+                  onClick={(e) => {
+                    if (!sponsor.link) e.preventDefault();
+                  }}
+                >
+                  <div className="flex flex-col items-center gap-2">
+                    {/* Logo Container */}
+                    <div className="w-32 h-32 rounded-lg border-2 overflow-hidden flex items-center justify-center transition-all duration-300 group-hover:scale-110 relative">
+                      {/* White background layer */}
+                      <div className="absolute inset-0 bg-white z-0"></div>
+                      
+                      {sponsor.logo ? (
+                        <iframe
+                          src={`https://drive.google.com/file/d/${sponsor.logo}/preview`}
+                          className="absolute border-0 pointer-events-none z-10"
+                          style={{ 
+                            width: '100%',
+                            height: '100%',
+                            top: '0',
+                            left: '0'
+                          }}
+                          title={sponsor.name}
+                        />
+                      ) : (
+                        <div className="text-2xl font-bold opacity-30">
+                          {sponsor.name.substring(0, 2).toUpperCase()}
+                        </div>
+                      )}
+                    </div>
+                    
+                    {/* Sponsor Info */}
+                    <div className="text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="text-xs text-muted-foreground">{sponsor.name}</div>
+                      <Badge variant="outline" className="text-xs mt-1">
+                        {sponsor.tier}
+                      </Badge>
+                    </div>
                   </div>
-                  
-                  {/* Sponsor Info */}
-                  <div className="text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="text-xs text-muted-foreground">{sponsor.name}</div>
-                    <Badge variant="outline" className="text-xs mt-1">
-                      {sponsor.tier}
-                    </Badge>
-                  </div>
-                </div>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -230,7 +279,7 @@ export default function FooterSection() {
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-10 h-10 text-primary" />
-                  <span>Presidency International School, House # 51, Panchlaish R/A, Road # 2 ,Chittagong, Bangladesh.</span>
+                  <span>Presidency International School, House # 51, Panchlaish R/A, Road # 2 ,Chittagong, Bangladesh.</span>
                 </div>
               </div>
             </motion.div>
@@ -269,9 +318,8 @@ export default function FooterSection() {
               <div className="flex items-center gap-2">
                 <img src={logoUrl} alt="PIMUN25" className="w-6 h-6 rounded-md thin-border object-cover" />
                 <span className="font-serif font-semibold text-primary">PIMUN25</span>
-                <span>© 2025 Presidency International MUN. All rights reserved.</span>
+                <span>© 2025 Presidency International MUN. All rights reserved to Nebucoders</span>
               </div>
-              
             </div>
           </motion.div>
         </div>

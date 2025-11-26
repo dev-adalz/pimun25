@@ -1,5 +1,11 @@
 # PIMUN25 Website
 
+# My Project
+
+This project is copyrighted by dev-adalz and nebucoders (2025). All rights reserved.
+No part of this project may be reproduced, distributed, or transmitted in any form or by any means,
+without the prior written permission of the copyright holder, except for viewing and forking on GitHub.
+
 A web application for **PIMUN ’25**, built using Next.js, React Hooks, and the Next.js router.  
 This repository contains the client (frontend) and server (backend) code, along with shared utilities.  
 

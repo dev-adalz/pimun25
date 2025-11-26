@@ -5,24 +5,6 @@ import Navigation from "@/components/Navigation";
 
 const groups = [
   {
-    title: "Quick Links",
-    items: [
-      { 
-        title: "Registration", 
-        desc: "Register Here", 
-        href: "/registration", 
-        type: "route" 
-      },
-      { 
-        title: "Committees & Agendas", 
-        desc: "Discover Available Committees and Agendas", 
-        href: "/", 
-        hash: "committees", 
-        type: "hash" 
-      },
-    ],
-  },
-  {
     title: "Committee Allocations",
     items: [
       { 
@@ -93,46 +75,66 @@ const groups = [
     title: "Study Guides",
     items: [
       { 
-        title: "Study Guide - CBD", 
+        title: "Study Guide - DISEC", 
         desc: "Use the study guides to research and prepare your committee agenda.", 
-        href: "https://drive.google.com/file/d/1KcFVVb7ET5gOaxZ9EMJgGQCnN9LYaBQN/view?usp=sharing", 
+        href:"https://drive.google.com/file/d/13cPszpfT2K2Edl-TXSBZUPURK9ZMvoju/view?usp=drive_link", 
         type: "external" 
+ 
       },
       { 
-        title: "Study Guide - ECOSOC", 
+        title: "Study Guide - UNSC", 
         desc: "Use the study guides to research and prepare your committee agenda.", 
-        href:"https://docs.google.com/document/d/1jLM9UtTGxPJBSsPcWEPpzHUI0puQ1L0j/edit?usp=sharing&ouid=116704944256234737368&rtpof=true&sd=true", 
-        type: "external" 
-      },
-      { 
-        title: "Study Guide - FAO", 
-        desc: "Use the study guides to research and prepare your committee agenda.", 
-        href: "https://docs.google.com/document/d/1lQ5CHR6d1-pdiVXRmR9rMsoN-jUa7GNd/edit?usp=sharing&ouid=116704944256234737368&rtpof=true&sd=true", 
-        type: "external" 
-      },
-      { 
-        title: "Study Guide - IAEA", 
-        desc: "Use the study guides to research and prepare your committee agenda.", 
-        href: "https://drive.google.com/file/d/1M2x3X_LXd64hxYqKxj78qGvqmYDCBcJF/view?usp=sharing", 
+        href: "https://drive.google.com/file/d/1frP9PxCszBaTH_hVzOPvRh8xTjVCWVPj/view?usp=drive_link", 
         type: "external" 
       },
       { 
         title: "Study Guide - UNDP", 
         desc: "Use the study guides to research and prepare your committee agenda.", 
-        href: "https://docs.google.com/document/d/14g9gYgMEyvaVNy35DHzx2iBGst5qMHiv/edit?usp=sharing&ouid=116704944256234737368&rtpof=true&sd=true", 
+        href: "https://drive.google.com/file/d/1_y44WVGOYELroPMD028N3aGPMPIL-viL/view?usp=drive_link", 
+        type: "external"
+      },
+      { 
+        title: "Study Guide - UNHRC", 
+        desc: "Use the study guides to research and prepare your committee agenda.", 
+        href: "https://drive.google.com/file/d/1x_qJSRIhtOs9lqG13J7IxGJWyfnYtsZ1/view?usp=drive_link", 
+        type: "external"  
+      },
+      { 
+        title: "Study Guide - CBD", 
+        desc: "Use the study guides to research and prepare your committee agenda.", 
+        href: "https://drive.google.com/file/d/1KcFVVb7ET5gOaxZ9EMJgGQCnN9LYaBQN/view?usp=drive_link", 
         type: "external" 
       },
       { 
         title: "Study Guide - ECOSOC", 
-        desc: "look through to find your name in the allocation", 
-        href: "https://docs.google.com/document/d/1LVnVMPPG-cwCBiKNUGSRI7PtvgacRBEZ/edit?usp=sharing&ouid=116704944256234737368&rtpof=true&sd=true", 
+        desc: "Use the study guides to research and prepare your committee agenda.", 
+        href: "https://drive.google.com/file/d/13ifY0IK_PdtS3qbADT46mO9pXErIjz0M/view?usp=drive_link", 
         type: "external" 
       },
       { 
         title: "Study Guide - UNCSW", 
         desc: "Use the study guides to research and prepare your committee agenda.", 
-        href: "https://drive.google.com/file/d/13q4oVSXzN3-tAUeKGDCQy3z8Cv6x6A5u/view?usp=sharing", 
+        href: "https://drive.google.com/file/d/1rDF23rimZ9wIOM8uH9IQqm3vWjSKuCoz/view?usp=drive_link", 
         type: "external" 
+      },
+      { 
+        title: "Study Guide - FAO", 
+        desc: "Use the study guides to research and prepare your committee agenda.", 
+        href: "https://drive.google.com/file/d/1NWCvGTwuQiiMe1yTYd8QuMiOFsSI1Wgz/view?usp=drive_link", 
+        type: "external"
+  
+      },
+      { 
+        title: "Study Guide - IPC", 
+        desc: "look through to find your name in the allocation", 
+        href: "https://drive.google.com/file/d/1o1OMmlXZyhIba9yBZLH-jEFfy2ly6tXi/view?usp=drive_link", 
+        type: "external"
+      },
+      { 
+        title: "Study Guide - IAEA", 
+        desc: "Use the study guides to research and prepare your committee agenda.", 
+        href: "https://drive.google.com/file/d/1M2x3X_LXd64hxYqKxj78qGvqmYDCBcJF/view?usp=drive_link", 
+        type: "external"
       }
     ],
   },

@@ -84,6 +84,7 @@ const team = [
   { role: "Secretariat", department: "Media & Marketing", img: "https://drive.google.com/file/d/1jNqrWMlH6cZlF65wN7JBPfjf_2bPyL88/view?usp=drive_link" },
   { role: "Secretariat", department: "Media & Marketing", img: "https://drive.google.com/file/d/1n46CtpfjaLT3qyNLSf_2JspoPIV416yW/view?usp=drive_link" },
   { role: "Secretariat", department: "Media & Marketing", img: "https://drive.google.com/file/d/1Oe2vN3YzrzaxCAl70URRtnGMLNfLC2Lo/view?usp=drive_link" },
+  { role: "Secretariat", department: "Media & Marketing", img: "https://drive.google.com/file/d/1MeqUDYAfabB7tQ5q31MDDepHxnjlgLTX/view?usp=drive_link" },
   { role: "Secretariat", department: "Media & Marketing", img: "https://drive.google.com/file/d/13HP6R0sRImWRAY9KJy1szGPYoAQaNLNg/view?usp=drive_link" },
   
   // Secretariat - Logistics
@@ -99,7 +100,8 @@ const team = [
   // Secretariat - Delegate Affairs
   { role: "Secretariat", department: "Delegate Affairs", img: "https://drive.google.com/file/d/1UaXtB9ipWT6zn565AJkOYnoZE8krAoia/view?usp=drive_link", groupImg: "https://drive.google.com/file/d/1lHsGAi0y3FdEbZCUaHvhVu9-ASfozyrK/view?usp=drive_link" },
   { role: "Secretariat", department: "Delegate Affairs", img: "https://drive.google.com/file/d/1fpBKkEGBWumQlHbrH4z-RdMZ0d5om0qq/view?usp=drive_link" },
-  { role: "Secretariat", department: "Delegate Affairs", img: "https://drive.google.com/file/d/1rvHTczCf2FODjnqMykHIizf_tOoxipTO/view?usp=drive_link" },  
+  { role: "Secretariat", department: "Delegate Affairs", img: "https://drive.google.com/file/d/1rvHTczCf2FODjnqMykHIizf_tOoxipTO/view?usp=drive_link" },
+  { role: "Secretariat", department: "Delegate Affairs", img: "https://drive.google.com/file/d/1YosaoXjLzF1g3uzK_DoFxoenQ4mhDz46/view?usp=drive_link" },  
   // Secretariat - Hospitality
   { role: "Secretariat", department: "Hospitality", img: "https://drive.google.com/file/d/1gEBCCim5xhb9rnYel7Kf9S-WGcx7cAXX/view?usp=drive_link", groupImg: "https://drive.google.com/file/d/1_2wvy-BuVqy2qqXS-Vn8JsKVwSDtY3Zg/view?usp=drive_link" },
   { role: "Secretariat", department: "Hospitality", img: "https://drive.google.com/file/d/1ncFGedTUqWDm1PmsegR6j40OsHObr6Ig/view?usp=drive_link" },

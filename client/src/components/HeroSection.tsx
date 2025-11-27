@@ -5,6 +5,9 @@ import { Globe, Calendar, Users, Award } from "lucide-react";
 import { useLocation } from "wouter";
 import logoUrl from "@assets/logo.png";
 import clubUrl from "@assets/club.png";
+import edu from "@assets/edu.png";
+import pis from "@assets/pis.png";
+
 import heroVideoUrl from "@assets/hero.mp4";
 import hallImg from "@assets/generated_images/Professional_MUN_conference_hall_6f29a800.png";
 
@@ -105,7 +108,35 @@ export default function HeroSection() {
         <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(60% 60% at 50% 40%, rgba(212,175,55,0.05) 0%, rgba(0,0,0,0) 60%)" }} />
       </motion.div>
 
-      {/* Watermark Logo - Hidden on mobile, visible on larger screens */}
+  
+
+      {/* Top Watermark Logos - Above center */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.4, duration: 1 }}
+        className="absolute top-[15%] right-2 md:right-4 transform z-5 pointer-events-none hidden sm:block"
+      >
+        <img
+          src={edu}
+          alt="PIMUN Logo Watermark Top"
+          className="w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80 object-contain opacity-20 md:opacity-25"
+        />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.4, duration: 1 }}
+        className="absolute top-[15%] left-2 md:left-4 transform z-5 pointer-events-none hidden sm:block"
+      >
+        <img
+          src={pis}
+          alt="PIMUN Club Logo Watermark Top"
+          className="w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80 object-contain opacity-20 md:opacity-25"
+        />
+      </motion.div>
+
+      {/* Center Watermark Logos - Original position */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -126,7 +157,7 @@ export default function HeroSection() {
       >
         <img
           src={clubUrl}
-          alt="PIMUN Logo Watermark"
+          alt="PIMUN Club Logo Watermark"
           className="w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80 object-contain opacity-20 md:opacity-25"
         />
       </motion.div>
@@ -219,7 +250,7 @@ export default function HeroSection() {
           </div>
           <div className="flex items-center justify-center gap-2">
             <Globe className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
-            <span>International Delegates</span>
+            <a href="https://www.presidency.ac.bd">Presidency International School</a>
           </div>
           <div className="flex items-center justify-center gap-2">
             <Users className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />

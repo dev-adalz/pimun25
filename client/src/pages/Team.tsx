@@ -96,7 +96,9 @@ const team = [
   // Secretariat - Finance
   { role: "Secretariat", department: "Finance", img: "https://drive.google.com/file/d/1SKHeciHkjWp-gzv2rMwDkfzQrEcvyVP8/view?usp=drive_link", groupImg: "https://drive.google.com/file/d/1el6FcGnqejSDMG8yVWkDYn-Ymrj4-NgY/view?usp=drive_link" },
   { role: "Secretariat", department: "Finance", img: "https://drive.google.com/file/d/1oSXtgLv7kzDSDFYxt2Ru8XmQev5pxR2u/view?usp=drive_link" },
-  
+  { role: "Secretariat", department: "Finance", img: "https://drive.google.com/file/d/10jjUvgpqgYv9qw1KfdDCporBQLk8zk-B/view?usp=drive_link" },
+  { role: "Secretariat", department: "Finance", img: "https://drive.google.com/file/d/1DKaPd2wEDOjsLpvqn2Pnsj01u20lc1QE/view?usp=drive_link" },
+
   // Secretariat - Delegate Affairs
   { role: "Secretariat", department: "Delegate Affairs", img: "https://drive.google.com/file/d/1UaXtB9ipWT6zn565AJkOYnoZE8krAoia/view?usp=drive_link", groupImg: "https://drive.google.com/file/d/1lHsGAi0y3FdEbZCUaHvhVu9-ASfozyrK/view?usp=drive_link" },
   { role: "Secretariat", department: "Delegate Affairs", img: "https://drive.google.com/file/d/1fpBKkEGBWumQlHbrH4z-RdMZ0d5om0qq/view?usp=drive_link" },

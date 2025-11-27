@@ -45,10 +45,9 @@ const convertGoogleDriveUrl = (url: string): string => {
 
 const sponsors = [
   { name: "KDS", logo: "12P5PJl8hN8fWtk1w8QTvH9N7fvC5t5l6", tier: "", link: "http://www.kdsgroup.net/" },
-  { name: "Asian", logo: "1NQ2TgNTbo8Mq4xau5RD9NRVq-JNUTYxM", tier: "", link: "" },
-  { name: "Chattogram City Corporation", logo: "1EOVE4Usx4D6nVwOQFMwyIUIEWhMoMh0q", tier: "", link: "" },
-  { name: "Pushti", logo: "", tier: "Silver", link: "" },
-  { name: "P2p Wecon", logo: "1yCbT5CbONyFxWXQSoI67LIrEJ4xxb8Or", tier: "", link: "" },
+  { name: "Chattogram City Corporation", logo: "1KBFspIIP1lfiAKaLpkbQ3M9aJsvKg4Pj", tier: "", link: "" },
+  { name: "Pushti", logo: "1LzisyMkE03G382GMFYoDFeF2i8cuPWn-", tier: "Silver", link: "" },
+  { name: "P2p Wecon", logo: "1EcBcv9jKK9jOcTC8YJ06rPfHLKFigO7C", tier: "", link: "" },
   { name: "Mentors", logo: "1v2rPlot-kqzm5IVhaPTXW84BA-hh8HxR", tier: "", link: "" },
   { name: "United Nations Bangladesh", logo: "1m0cqEJLXQz6XYUiocmO9oU-13NGREYow", tier: "Strategic Partner", link: "" }
 ];
@@ -93,64 +92,83 @@ export default function FooterSection() {
             </h3>
           </motion.div>
 
-          {/* Sponsors Grid */}
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            {sponsors.map((sponsor, index) => (
-              <motion.div
-                key={sponsor.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={inView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ 
-                  duration: 0.5, 
-                  delay: index * 0.1,
-                  ease: "easeOut"
-                }}
-                className="relative group"
-                data-testid={`sponsor-${index}`}
-              >
-                <a 
-                  href={sponsor.link || undefined}
-                  className={`block ${sponsor.link ? 'cursor-pointer' : 'cursor-default'}`}
-                  onClick={(e) => {
-                    if (!sponsor.link) e.preventDefault();
-                  }}
+          {/* Sponsors Sliding Carousel */}
+          <div className="relative overflow-hidden">
+            {/* Gradient overlays for fade effect */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
+            
+            <motion.div
+              className="flex gap-12"
+              animate={{
+                x: [0, -100 * sponsors.length]
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 20,
+                  ease: "linear"
+                }
+              }}
+            >
+              {/* Render sponsors twice for seamless loop */}
+              {[...sponsors, ...sponsors].map((sponsor, index) => (
+                <div
+                  key={`${sponsor.name}-${index}`}
+                  className="relative group flex-shrink-0"
+                  data-testid={`sponsor-${index}`}
                 >
-                  <div className="flex flex-col items-center gap-2">
-                    {/* Logo Container */}
-                    <div className="w-32 h-32 rounded-lg border-2 overflow-hidden flex items-center justify-center transition-all duration-300 group-hover:scale-110 relative">
-                      {/* White background layer */}
-                      <div className="absolute inset-0 bg-white z-0"></div>
+                  <a 
+                    href={sponsor.link || undefined}
+                    className={`block ${sponsor.link ? 'cursor-pointer' : 'cursor-default'}`}
+                    onClick={(e) => {
+                      if (!sponsor.link) e.preventDefault();
+                    }}
+                    target={sponsor.link ? "_blank" : undefined}
+                    rel={sponsor.link ? "noopener noreferrer" : undefined}
+                  >
+                    <div className="flex flex-col items-center gap-2">
+                      {/* Logo Container */}
+                      <div className="w-32 h-32 rounded-lg border-2 overflow-hidden flex items-center justify-center transition-all duration-300 group-hover:scale-110 relative">
+                        {/* White background layer */}
+                        <div className="absolute inset-0 bg-white z-0"></div>
+                        
+                        {sponsor.logo ? (
+                          <iframe
+                            src={`https://drive.google.com/file/d/${sponsor.logo}/preview`}
+                            className="absolute border-0 pointer-events-none z-10"
+                            style={{ 
+                              width: '200%',
+                              height: '200%',
+                              top: '50%',
+                              left: '50%',
+                              transform: 'translate(-50%, -50%) scale(0.8)',
+                              objectFit: 'contain'
+                            }}
+                            title={sponsor.name}
+                          />
+                        ) : (
+                          <div className="text-2xl font-bold opacity-30">
+                            {sponsor.name.substring(0, 2).toUpperCase()}
+                          </div>
+                        )}
+                      </div>
                       
-                      {sponsor.logo ? (
-                        <iframe
-                          src={`https://drive.google.com/file/d/${sponsor.logo}/preview`}
-                          className="absolute border-0 pointer-events-none z-10"
-                          style={{ 
-                            width: '100%',
-                            height: '100%',
-                            top: '0',
-                            left: '0'
-                          }}
-                          title={sponsor.name}
-                        />
-                      ) : (
-                        <div className="text-2xl font-bold opacity-30">
-                          {sponsor.name.substring(0, 2).toUpperCase()}
-                        </div>
-                      )}
+                      {/* Sponsor Info */}
+                      <div className="text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="text-xs text-muted-foreground">{sponsor.name}</div>
+                        {sponsor.tier && (
+                          <Badge variant="outline" className="text-xs mt-1">
+                            {sponsor.tier}
+                          </Badge>
+                        )}
+                      </div>
                     </div>
-                    
-                    {/* Sponsor Info */}
-                    <div className="text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="text-xs text-muted-foreground">{sponsor.name}</div>
-                      <Badge variant="outline" className="text-xs mt-1">
-                        {sponsor.tier}
-                      </Badge>
-                    </div>
-                  </div>
-                </a>
-              </motion.div>
-            ))}
+                  </a>
+                </div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </div>

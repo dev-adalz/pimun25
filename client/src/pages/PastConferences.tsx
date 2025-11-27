@@ -1,10 +1,23 @@
 import Navigation from "@/components/Navigation";
 import { images } from "@/lib/images";
-
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 
 const past = [
-  { year: 2023, stats: "300+ delegates", img: images[15], desc: "PIMUN 2023" },
-  { year: 2019, stats: "250+ delegates", img: images[14], desc: "PIMUN 2019" },
+  { 
+    year: 2023, 
+    stats: "300+ delegates", 
+    img: images[15], 
+    desc: "PIMUN 2023",
+    link: "https://example.com/pimun2023" // Replace with actual link
+  },
+  { 
+    year: 2019, 
+    stats: "250+ delegates", 
+    img: images[14], 
+    desc: "PIMUN 2019",
+    link: "https://example.com/pimun2019" // Replace with actual link
+  },
 ];
 
 export default function PastConferences() {
@@ -26,10 +39,21 @@ export default function PastConferences() {
                   <div className="shrink-0 w-10 h-10 rounded-full bg-primary/15 thin-border flex items-center justify-center text-sm font-semibold lgold-glow">{c.year}</div>
                   <div className="flex-1">
                     <div className="glass thin-border rounded-xl overflow-hidden lgold-glow">
-                      <img src={c.img} className="w-full aspect-video object-cover" />
+                      <img src={c.img} alt={c.desc} className="w-full aspect-video object-cover" />
                       <div className="p-4">
                         <div className="text-sm text-muted-foreground">{c.stats}</div>
-                        <div className="text-sm text-foreground mt-1">{c.desc}</div>
+                        <div className="text-sm text-foreground mt-1 mb-3">{c.desc}</div>
+                        
+                        {/* Show More Button - Opens External Link */}
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={() => window.open(c.link, '_blank')}
+                          className="bg-primary/10 hover:bg-primary/20 border-primary/30 text-primary"
+                        >
+                          Show More
+                          <ExternalLink className="w-4 h-4 ml-2" />
+                        </Button>
                       </div>
                     </div>
                   </div>

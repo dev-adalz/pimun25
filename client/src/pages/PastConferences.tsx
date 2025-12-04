@@ -9,14 +9,14 @@ const past = [
     stats: "300+ delegates", 
     img: images[15], 
     desc: "PIMUN 2023",
-    link: "https://example.com/pimun2023" // Replace with actual link
+    link: "https://www.presidencybd.edu.bd/photogallerydetails/9" // Replace with actual link
   },
   { 
     year: 2019, 
     stats: "250+ delegates", 
     img: images[14], 
     desc: "PIMUN 2019",
-    link: "https://example.com/pimun2019" // Replace with actual link
+    link: "https://presidency.ac.bd/eventsnews/presidency-international-mun-2019/" // Replace with actual link
   },
 ];
 

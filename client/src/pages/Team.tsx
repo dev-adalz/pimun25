@@ -44,6 +44,8 @@ const tiers = [
   { name: "Executive Board", desc: "Chairs and Co-chairs" },
   { name: "Secretariat", desc: "Leadership of PIMUN25" },
   { name: "Campus Ambassador", desc: "Outreach and promotions" },
+  { name: "Advisors", desc: "Advisors for the evemt" },
+
 ];
 
 const secretariatDepartments = [
@@ -66,6 +68,7 @@ const team = [
   // Secretariat - IT
   { role: "Secretariat", department: "IT", img: "https://drive.google.com/file/d/18DJ2ZQ1gJjJiju0Vc0UfG0SK-SznsPcv/view?usp=drive_link", groupImg: "https://drive.google.com/file/d/1fPOaI_pCZ_Mjp-sNL5Evnkq6wXvr_4V1/view?usp=drive_link" },
   { role: "Secretariat", department: "IT", img: "https://drive.google.com/file/d/1eJiubbbrMAXCu27pnIin_988ITYFKugk/view?usp=drive_link" },
+  { role: "Secretariat", department: "IT", img: "https://drive.google.com/file/d/1-US0x9tLrJcQHKAZmCLjXDykYax7HeQS/view?usp=sharing" },
   
   // Secretariat - Academics & Documentation
   { role: "Secretariat", department: "Academics & Documentation", img: "https://drive.google.com/file/d/1BQrRhj9N1YrMjPbUwkiOuEaieNMWRpXC/view?usp=drive_link", groupImg: "https://drive.google.com/file/d/1heCX-qo12vQVSMlP0HZ46vdBFdT4VpMu/view?usp=drive_link" },
@@ -98,12 +101,14 @@ const team = [
   { role: "Secretariat", department: "Finance", img: "https://drive.google.com/file/d/1oSXtgLv7kzDSDFYxt2Ru8XmQev5pxR2u/view?usp=drive_link" },
   { role: "Secretariat", department: "Finance", img: "https://drive.google.com/file/d/10jjUvgpqgYv9qw1KfdDCporBQLk8zk-B/view?usp=drive_link" },
   { role: "Secretariat", department: "Finance", img: "https://drive.google.com/file/d/1DKaPd2wEDOjsLpvqn2Pnsj01u20lc1QE/view?usp=drive_link" },
-
+  { role: "Secretariat", department: "Finance", img: "https://drive.google.com/file/d/1EzVOH68NvfZD18U9wXq7WCAz-QvM0LAx/view?usp=sharing" },
+  
   // Secretariat - Delegate Affairs
   { role: "Secretariat", department: "Delegate Affairs", img: "https://drive.google.com/file/d/1UaXtB9ipWT6zn565AJkOYnoZE8krAoia/view?usp=drive_link", groupImg: "https://drive.google.com/file/d/1lHsGAi0y3FdEbZCUaHvhVu9-ASfozyrK/view?usp=drive_link" },
   { role: "Secretariat", department: "Delegate Affairs", img: "https://drive.google.com/file/d/1fpBKkEGBWumQlHbrH4z-RdMZ0d5om0qq/view?usp=drive_link" },
   { role: "Secretariat", department: "Delegate Affairs", img: "https://drive.google.com/file/d/1rvHTczCf2FODjnqMykHIizf_tOoxipTO/view?usp=drive_link" },
   { role: "Secretariat", department: "Delegate Affairs", img: "https://drive.google.com/file/d/1YosaoXjLzF1g3uzK_DoFxoenQ4mhDz46/view?usp=drive_link" },  
+  
   // Secretariat - Hospitality
   { role: "Secretariat", department: "Hospitality", img: "https://drive.google.com/file/d/1gEBCCim5xhb9rnYel7Kf9S-WGcx7cAXX/view?usp=drive_link", groupImg: "https://drive.google.com/file/d/1_2wvy-BuVqy2qqXS-Vn8JsKVwSDtY3Zg/view?usp=drive_link" },
   { role: "Secretariat", department: "Hospitality", img: "https://drive.google.com/file/d/1ncFGedTUqWDm1PmsegR6j40OsHObr6Ig/view?usp=drive_link" },
@@ -113,29 +118,55 @@ const team = [
   { role: "Secretariat", department: "Hospitality", img: "https://drive.google.com/file/d/1tTYbV_U80Nmi9B4NV9CcjdCMtr1Qxm95/view?usp=drive_link" },
   { role: "Secretariat", department: "Hospitality", img: "https://drive.google.com/file/d/1hxtL_eqeeWhmPa2bif1zUxFEu1TdSOQx/view?usp=drive_link" },
   { role: "Secretariat", department: "Hospitality", img: "https://drive.google.com/file/d/1-sv9XPKBYgy6O-Irk4-AU7W5BLCE9RUP/view?usp=drive_link" },
-  
-  // Secretariat - Conference Management & Security
-  { role: "Secretariat", department: "Conference Management & Security", img: "https://drive.google.com/file/d/1Rf_jIFmYRnbNNgdR-ZGxDxZpGLNwU7KQ/view?usp=drive_link", groupImg: "https://drive.google.com/file/d/13BrvcBmPbkp5OoJbnZzlINHNA6MSwy_9/view?usp=drive_link" },
+
+  // Secretariat - Conference Management & Security     
+  { role: "Secretariat", department: "Conference Management & Security", img: "https://drive.google.com/file/d/1ItewS39DyRiWo7qwB7tJzdV8sqgiVTzW/view?usp=drive_link", groupImg: "https://drive.google.com/file/d/13BrvcBmPbkp5OoJbnZzlINHNA6MSwy_9/view?usp=drive_link" },
   { role: "Secretariat", department: "Conference Management & Security", img: "https://drive.google.com/file/d/1q4_WDXTK3pBEafjjYX_F9G1W22jzYfJS/view?usp=drive_link" },
-  { role: "Secretariat", department: "Conference Management & Security", img: "https://drive.google.com/file/d/1ItewS39DyRiWo7qwB7tJzdV8sqgiVTzW/view?usp=drive_link" },
+  { role: "Secretariat", department: "Conference Management & Security", img: "https://drive.google.com/file/d/1Rf_jIFmYRnbNNgdR-ZGxDxZpGLNwU7KQ/view?usp=drive_link" },
   { role: "Secretariat", department: "Conference Management & Security", img: "https://drive.google.com/file/d/1bCkYzrCSjX8eCPk-ja4FZM5Gf_7j21xu/view?usp=drive_link" },
   { role: "Secretariat", department: "Conference Management & Security", img: "https://drive.google.com/file/d/1SfifwoGFBTgHvyFwc85qYkYrtFbmniIX/view?usp=drive_link" },
   { role: "Secretariat", department: "Conference Management & Security", img: "https://drive.google.com/file/d/1iNz51fAzrV7Rz0N4nZ3hfCz91xReaQHN/view?usp=sharing" },
-  { role: "Secretariat", department: "Conference Management & Security", img: "https://drive.google.com/file/d/1iadj8Jm5cxpY7vpBcGsAfCRW2L4utug3/view?usp=drive_link" },  
+  { role: "Secretariat", department: "Conference Management & Security", img: "https://drive.google.com/file/d/1iadj8Jm5cxpY7vpBcGsAfCRW2L4utug3/view?usp=drive_link" },
+  { role: "Secretariat", department: "Conference Management & Security", img: "https://drive.google.com/file/d/1eykY8KdGap8DfNC5fnRFYZsxgP5Q-byU/view?usp=drive_link" },
+  { role: "Secretariat", department: "Conference Management & Security", img: "https://drive.google.com/file/d/146B90ZnEGDyz6ytX6alID8ls_bhL2gUh/view?usp=drive_link" }, 
+  { role: "Secretariat", department: "Conference Management & Security", img: "https://drive.google.com/file/d/1NYmRpyzXpA3pvE4Mv1eRC7xFV0fW9FzZ/view?usp=drive_link" }, 
+
   // Executive Board
-  { role: "Executive Board", img: "https://placehold.co/400x400/e2e8f0/64748b?text=Member+1" },
-  { role: "Executive Board", img: "https://placehold.co/400x400/e2e8f0/64748b?text=Member+2" },
-  { role: "Executive Board", img: "https://placehold.co/400x400/e2e8f0/64748b?text=Member+3" },
-  { role: "Executive Board", img: "https://placehold.co/400x400/e2e8f0/64748b?text=Member+4" },
-  { role: "Executive Board", img: "https://placehold.co/400x400/e2e8f0/64748b?text=Member+5" },
-  { role: "Executive Board", img: "https://placehold.co/400x400/e2e8f0/64748b?text=Member+6" },
-  { role: "Executive Board", img: "https://placehold.co/400x400/e2e8f0/64748b?text=Member+7" },
-  { role: "Executive Board", img: "https://placehold.co/400x400/e2e8f0/64748b?text=Member+8" },
-  
+  { role: "Zaid Ekram — President, UNSC.", img: "https://i.postimg.cc/PJ5PXmYX/Whats-App-Image-2025-11-28-at-02-51-52-f2eb699f.jpg" },
+  { role: "Shams Shafayet Abeyaz - Rapporteur, UNSC.", img: "https://i.postimg.cc/RZKVzPy6/Whats-App-Image-2025-11-28-at-02-51-54-5075d87a.jpg" },
+  { role: "Al Magruf Bin Ataur - President, UNDP.", img: "https://i.postimg.cc/Hxxgj3ZS/Whats-App-Image-2025-11-28-at-02-51-56-5395adff.jpg" },
+  { role: "Sakif Ishmam - Vice Presidenct, UNDP.", img: "https://i.postimg.cc/GmK32B3r/Whats-App-Image-2025-11-28-at-02-51-57-b535ee3a.jpg" },
+  { role: "Abdullah al Fahad - President, UNHRC.", img: "https://i.postimg.cc/Mp9xwhtp/Whats-App-Image-2025-11-28-at-02-51-58-706d7625.jpg" },
+  { role: "Farheen Marium - Vice President, UNHRC.", img: "https://i.postimg.cc/K8pXwtvz/Whats-App-Image-2025-11-28-at-02-51-59-331b934b.jpg" },
+  { role: "Anika Tahsin Sami - Chairperson, UNCSW.", img: "https://i.postimg.cc/XNfR3RYq/Whats-App-Image-2025-11-28-at-02-52-00-7f73dc34.jpg" },
+  { role: "Shakiya Sharmin Ahona - Vice Chairperson, UNCSW.", img: "https://i.postimg.cc/D06psKS8/Whats-App-Image-2025-11-28-at-02-52-01-d04f3379.jpg" },
+  { role: "Nayeem Uddin - Director General, IAEA.", img: "https://i.postimg.cc/wMjcCRBR/Whats-App-Image-2025-11-28-at-02-52-01-d81247c6.jpg" },
+  { role: "Ariana Noor - Director, IAEA.", img: "https://i.postimg.cc/MZ3ycTTL/Whats-App-Image-2025-11-28-at-02-52-02-86ce99f6.jpg" },
+  { role: "Mohammad Tanzibul Hasan Sahir - Chairperson, ECOSOC.", img: "https://i.postimg.cc/xjXP3HB4/Whats-App-Image-2025-11-28-at-02-52-02-d545a635.jpg" },
+  { role: "Pritom Das - Vice Chairperson, ECOSOC.", img: "https://i.postimg.cc/PxP1KsVv/Whats-App-Image-2025-11-28-at-02-52-03-818f6c3d.jpg" },
+  { role: "Shorna Saha - President, CBD.", img: "https://i.postimg.cc/vHd6xVyP/Whats-App-Image-2025-11-28-at-02-52-03-8f8a11ed.jpg" },
+  { role: "Zuhair Ibne Alam - Director, CBD.", img: "https://i.postimg.cc/PrhP5nbv/Whats-App-Image-2025-11-28-at-02-52-04-fe78ab24.jpg" },
+  { role: "MD Miraz Hossain Chowdhury - Director, CBD.", img: "https://i.postimg.cc/T1c2Dhjt/Whats-App-Image-2025-11-28-at-02-52-04-b5d8ed2c.jpg" },
+  { role: "Md Ariful Islam Bhuiyan - President, DISEC.", img: "https://i.postimg.cc/FFxhGdcJ/Whats-App-Image-2025-11-28-at-02-52-05-137bbc18.jpg" },
+  { role: "Sahal Abrar - Rapporteur, DISEC.", img: "https://i.postimg.cc/bvXXqpb7/Whats-App-Image-2025-11-28-at-02-52-06-c37bbdc9.jpg" },
+  { role: "Areeb Noor Farooqui - Vice President, DISEC.", img: "https://i.postimg.cc/Bb7yk0J9/Whats-App-Image-2025-11-28-at-02-52-06-3fd0299a.jpg" },
+  { role: "Kushol Kanti Dey - Director General, FAO.", img: "https://i.postimg.cc/zX92gpBQ/Whats-App-Image-2025-11-28-at-02-52-06-cbdef5c0.jpg" },
+  { role: "Tasnim Mahzabeen Simky - Director, FAO.", img: "https://i.postimg.cc/YC6RmHT4/Whats-App-Image-2025-11-28-at-02-52-08-2a762988.jpg" },
+  { role: "Iftekhar Ali Siam - Editor, IP.", img: "https://i.postimg.cc/fbWPzyy8/Whats-App-Image-2025-11-28-at-02-52-08-4fa9b267.jpg" },
+  { role: "Sehreen Javed - Sub editor, IP.", img: "https://i.postimg.cc/50hpC29w/Whats-App-Image-2025-11-28-at-02-52-08-0454a558.jpg" },
+
   // Campus Ambassador
-  { role: "Campus Ambassador", img: "https://placehold.co/400x400/e2e8f0/64748b?text=Member+1" },
-  { role: "Campus Ambassador", img: "https://placehold.co/400x400/e2e8f0/64748b?text=Member+2" },
-  { role: "Campus Ambassador", img: "https://placehold.co/400x400/e2e8f0/64748b?text=Member+3" },
+  { role: "Campus Ambassador", img: "https://i.postimg.cc/0ys9JnD9/Heena-Amani.jpg" },
+  { role: "Campus Ambassador", img: "https://i.postimg.cc/g01SnSLf/Iqra-Arwowa.jpg" },
+  { role: "Campus Ambassador", img: "https://i.postimg.cc/RVGgcVnm/Nuzaima-Rahman.jpg" }, 
+  { role: "Campus Ambassador", img: "https://i.postimg.cc/T2swhntp/Sanaz-Alam.jpg" },
+  { role: "Campus Ambassador", img: "https://i.postimg.cc/nzyhSJj2/Sheikh-Arham.jpg" },
+  { role: "Campus Ambassador", img: "https://i.postimg.cc/7ZKY87Jf/Tazwar-Toufique.jpg" },
+  { role: "Campus Ambassador", img: "https://i.postimg.cc/pXx2mkDT/Washique-Ahmad-Hossain.jpg" },
+
+  { role: "Advisors", img: "https://i.postimg.cc/6q2H6xDp/Whats-App-Image-2025-12-04-at-23-39-57-7d08fe16.jpg" },
+  { role: "Advisors", img: "https://i.postimg.cc/j589dX23/Whats-App-Image-2025-12-04-at-23-42-01-7d12ceda.jpg" },
+  { role: "Advisors", img: "https://i.postimg.cc/wMGSFVd4/Whats-App-Image-2025-12-05-at-00-03-23-7aeef216.jpg" }, 
 ];
 
 export default function Team() {
@@ -144,18 +175,22 @@ export default function Team() {
   const [query, setQuery] = useState<string>("");
 
   const filtered = useMemo(() => {
-    if (activeTier === "Secretariat") {
-      const deptMembers = team.filter(
-        (m) => m.role === "Secretariat" && m.department === activeDepartment
-      );
-      const byQuery = query.trim().toLowerCase();
-      if (!byQuery) return deptMembers;
-      return deptMembers.filter((m) => m.department?.toLowerCase().includes(byQuery));
-    } else {
-      const byTier = team.filter((m) => m.role === activeTier);
-      return byTier;
-    }
-  }, [activeTier, activeDepartment, query]);
+  if (activeTier === "Secretariat") {
+    const deptMembers = team.filter(
+      (m) => m.role === "Secretariat" && m.department === activeDepartment
+    );
+    const byQuery = query.trim().toLowerCase();
+    if (!byQuery) return deptMembers;
+    return deptMembers.filter((m) => m.department?.toLowerCase().includes(byQuery));
+  } else if (activeTier === "Executive Board") {
+    // For Executive Board, filter members whose role is NOT "Secretariat" or "Campus Ambassador"
+    return team.filter((m) => m.role !== "Secretariat" && m.role !== "Campus Ambassador" && m.role !== "Advisors");
+  } else {
+    // For Campus Ambassador or other tiers
+    const byTier = team.filter((m) => m.role === activeTier);
+    return byTier;
+  }
+}, [activeTier, activeDepartment, query]);
 
   const groupPhoto = useMemo(() => {
     if (activeTier === "Secretariat") {
@@ -243,31 +278,51 @@ export default function Team() {
                   className="overflow-hidden hover:shadow-lg transition-all hover:scale-105"
                 >
                   <CardContent className="p-0">
-                    <div className="aspect-square relative overflow-hidden bg-muted">
-                      {member.img ? (
-                        <iframe
-                          src={`https://drive.google.com/file/d/${member.img.includes('/') ? convertGoogleDriveUrl(member.img).split('id=')[1] : member.img}/preview`}
-                          className="absolute border-0 z-10 pointer-events-none"
-                          style={{ 
-                            width: '200%',
-                            height: '200%',
-                            top: '-10%',
-                            left: '50%',
-                            transform: 'translateX(-50%)'
-                          }}
-                          allow="autoplay"
-                          onLoad={(e) => {
-                            const fallback = e.currentTarget.nextElementSibling;
-                            if (fallback) {
-                              (fallback as HTMLElement).style.display = 'none';
-                            }
-                          }}
-                          onError={(e) => {
-                            console.error('Image failed to load:', member.img);
-                            e.currentTarget.style.display = 'none';
-                          }}
-                        />
-                      ) : null}
+                  <div className="aspect-square relative overflow-hidden bg-muted">
+  {member.img ? (
+    // Check if it's a direct image URL (ends with image extension)
+    /\.(jpg|jpeg|png|gif|webp)$/i.test(member.img) ? (
+      <img
+        src={member.img}
+        alt={member.role}
+        className="absolute inset-0 w-full h-full object-cover z-10"
+        style={{ display: 'block' }}
+        onLoad={(e) => {
+          const fallback = e.currentTarget.nextElementSibling;
+          if (fallback) {
+            (fallback as HTMLElement).style.display = 'none';
+          }
+        }}
+        onError={(e) => {
+          console.error('Image failed to load:', member.img);
+          e.currentTarget.style.display = 'none';
+        }}
+      />
+    ) : (
+      <iframe
+        src={`https://drive.google.com/file/d/${member.img.includes('/') ? convertGoogleDriveUrl(member.img).split('id=')[1] : member.img}/preview`}
+        className="absolute border-0 z-10 pointer-events-none"
+        style={{ 
+          width: '200%',
+          height: '200%',
+          top: '-10%',
+          left: '50%',
+          transform: 'translateX(-50%)'
+        }}
+        allow="autoplay"
+        onLoad={(e) => {
+          const fallback = e.currentTarget.nextElementSibling;
+          if (fallback) {
+            (fallback as HTMLElement).style.display = 'none';
+          }
+        }}
+        onError={(e) => {
+          console.error('Image failed to load:', member.img);
+          e.currentTarget.style.display = 'none';
+        }}
+      />
+    )
+  ) : null}
                       <div className="absolute inset-0 w-full h-full bg-muted flex items-center justify-center z-0">
                         <Avatar className="w-16 h-16 sm:w-20 sm:h-20">
                           <AvatarFallback className="text-lg">
